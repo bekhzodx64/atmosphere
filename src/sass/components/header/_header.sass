@@ -1,25 +1,26 @@
 .header
-  position: fixed
-  left: 0
-  right: 0
-  top: 0
-  z-index: 40
-  display: flex
-  align-items: center
-  justify-content: flex-end
-  padding: 20px
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	z-index: 40
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	padding: 20px
+	pointer-events: none
 
-  @include md()
-    display: none
+	@include md()
+		display: none
 
-  &-button
-    width: 34px
-    height: 30px
-    background-color: rgb(11, 22, 31)
-    border-radius: 5px
-    border: none
-    padding: 0 7px
-
-    display: flex
-    align-items: center
-    justify-content: center
+	&-button
+		width: 34px
+		height: 30px
+		background-color: rgb(11, 22, 31)
+		border-radius: 5px
+		border: none
+		padding: 0 7px
+		display: flex
+		align-items: center
+		justify-content: center
+		pointer-events: all

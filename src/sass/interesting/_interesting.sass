@@ -1,115 +1,176 @@
 .interesting
-    min-height: 100vh
-    padding-top: 40px
+	min-height: 100vh
+	// padding-top: 40px
+	// padding: 40px 0 20px
+	padding: 60px 20px
 
-    &-title
-        font-family: 'Gilroy'
-        text-transform: uppercase
-        font-weight: 900
-        font-size: 80px
-        transform: rotate(-7.30deg)
-        margin-bottom: 100px
-        +blue-text-outlined
+	@include md
+		padding: 50px 0 30px 120px
 
-    &-header
-        display: flex
-        justify-content: space-between
-        align-items: end
+	@include lg
+		padding-left: 200px
 
-        &__title
-            max-width: 604px
-            font-size: 22px
-            font-weight: 500
-            color: #0B161F
+	@include xl
+		padding-left: 300px
 
-        &__distance
-            font-size: 22px
-            font-weight: 500
+	@include xxxl
+		padding-left: 120px
 
-    &-content
-        margin-top: 30px
-        margin-bottom: 70px
+	&-title
+		font-weight: 900
+		line-height: 1
+		font-family: 'Gilroy'
+		text-transform: uppercase
+		text-wrap: balance
+		font-size: clamp(50px, 4vw, 80px)
+		margin-bottom: clamp(14px , 6vw, 100px)
+		display: inline-block
+		+blue-text-outlined
 
-        .interesting-item
-            display: flex
-            align-items: center
-            justify-content: flex-end
-            position: relative
-            padding: 35px 0
-            border-bottom: 2px #005495 dashed
+		@include md
+			transform: rotate(-7.30deg)
 
-            &:has(.interesting-item__card)
-                justify-content: space-between
+	&-header
 
-            &::before
-                content: ''
-                display: inline-block
-                position: absolute
-                right: 0
-                bottom: 0
-                transform: translateY(50%)
-                width: 10px
-                height: 10px
-                border-radius: 100px
-                background-color: #0039A8
+		@include md
+			display: flex
+			justify-content: space-between
+			align-items: end
 
-            &::after
-                content: ''
-                display: inline-block
-                position: absolute
-                left: 0
-                bottom: 0
-                transform: translateY(50%)
-                width: 10px
-                height: 10px
-                border-radius: 100px
-                background-color: #0039A8
+		&__title
+			max-width: 604px
+			font-weight: 500
+			color: #0B161F
+			font-size: clamp(18px, 5vw, 22px)
+			letter-spacing: -1px
 
-            &__container
-                display: flex
-                gap: 25px
-                flex-wrap: wrap
-                flex: 1 0 0
+		&__distance
+			font-weight: 500
+			font-size: clamp(12px, 3vw, 22px)
+			margin-top: 14px
+			margin-left: auto
+			max-width: min-content
+			text-align: right
 
-            &__card
-                display: flex
-                gap: 14px
-                background-color: #fff
-                border-radius: 30px
-                width: 360px
-                height: 130px
-                overflow: hidden
-                padding: 10px
+			@include md
+				max-width: max-content
+				margin: 0
 
-                img
-                    width: 110px
-                    height: 110px
-                    border-radius: 25px
-                    object-fit: cover
-                    user-select: none
+	&-content
+		margin: 30px 0
 
-                &-info
-                    display: flex
-                    flex-direction: column
-                    padding: 5px 0
-                    flex: 1
+		.interesting-item
+			display: flex
+			justify-content: flex-end
+			position: relative
 
-                    .title
-                        color: #0B161F
-                        font-size: 20px
-                        font-weight: 500
-                        +limit-line(2)
+			@include md
+				align-items: center
+				padding: 35px 0
+				border-bottom: 2px #005495 dashed
 
-                    .distance
-                        margin-top: auto
-                        color: #005495
-                        font-size: 20px
-                        font-weight: 500
-                        +limit-line(1)
+			&:has(.interesting-item__card)
+				justify-content: space-between
 
-            &__distance
-                font-size: 80px
-                font-weight: 900
-                font-family: 'Gilroy'
-                text-transform: uppercase
-                +blue-text-outlined
+			&::before
+				content: ''
+				display: none
+				position: absolute
+				right: 0
+				bottom: 0
+				transform: translateY(50%)
+				width: 10px
+				height: 10px
+				border-radius: 100px
+				background-color: #0039A8
+				@include md
+					display: inline-block
+
+			&::after
+				content: ''
+				display: none
+				position: absolute
+				left: 0
+				bottom: 0
+				transform: translateY(50%)
+				width: 10px
+				height: 10px
+				border-radius: 100px
+				background-color: #0039A8
+				@include md
+					display: inline-block
+
+			&__container
+				display: flex
+				gap: 25px
+				flex-wrap: wrap
+				flex: 1 0 0
+
+			&__card
+				display: flex
+				gap: 8px
+				background-color: #fff
+				border-radius: 14px
+				max-width: 222px
+				overflow: hidden
+				padding: 6px
+
+				@include md
+					padding: 10px
+					gap: 14px
+					border-radius: 30px
+					max-width: none
+					width: 360px
+					height: 130px
+
+				img
+					display: block
+					width: 62px
+					height: 62px
+					aspect-ratio: 1/1
+					border-radius: 14px
+					object-fit: cover
+					user-select: none
+
+					@include md
+						width: 110px
+						height: 110px
+						border-radius: 25px
+
+				&-info
+					display: flex
+					flex-direction: column
+					flex: 1
+
+					@include md
+						padding: 5px 0
+
+					.title
+						color: #0B161F
+						font-weight: 500
+						font-size: 14px
+						+limit-line(2)
+
+						@include md
+							font-size: 20px
+
+					.distance
+						margin-top: auto
+						color: #005495
+						font-weight: 500
+						font-size: 14px
+						+limit-line(1)
+
+						@include md
+							font-size: 20px
+
+			&__distance
+				font-weight: 900
+				font-family: 'Gilroy'
+				text-transform: uppercase
+				font-size: clamp(25px, 4vw, 80px)
+				margin-top: -15px
+				+blue-text-outlined
+
+				@include md
+					margin-top: 0
