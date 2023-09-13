@@ -1,0 +1,246 @@
+.modal
+    position: fixed
+    inset: 0
+    background-color: rgba(132,189,255,60%)
+    z-index: 100
+    display: flex
+    justify-content: center
+
+    opacity: 0
+    visibility: hidden
+
+    transition: all .1s ease-in-out
+
+    &.show
+        opacity: 1
+        visibility: visible
+        overflow: hidden
+
+        .modal-content
+            opacity: 1
+            transform: translateY(0)
+
+    &-close
+        position: absolute
+        right: 20px
+        top: 20px
+        width: 36px
+        height: 36px
+        border-radius: 50%
+        border: none
+        background-color: rgba(23,30,43, 50%)
+        align-items: center
+        justify-content: center
+        display: none
+
+        img
+            display: block
+            transform: translate(-1px,0)
+
+        @include lg
+            display: flex
+
+    &-content
+        position: relative
+        background-color: #171E2B
+        width: 100%
+        height: 100%
+        padding: 60px 20px 20px
+
+        opacity: 0
+        transition: all .5s ease
+        transition-delay: .1s
+        transform: translateY(50px)
+
+        @include lg
+            padding: 50px
+            max-width: 650px
+
+        @include xl
+            padding: 50px 150px
+            max-width: 1260px
+
+        .progress-bar
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            height: 45px
+            width: 100%
+            background-color: rgba(11, 22, 31, 1)
+
+            @include lg
+                display: none
+
+            .title
+                font-size: 10px
+                position: absolute
+                left: 20px
+                top: 45%
+                transform: translateY(-50%)
+
+                @include md
+                    font-size: 12px
+
+            .line
+                width: 0
+                height: 40px
+                background-image: linear-gradient(45deg,rgb(164, 115, 243,.5), rgb(162, 119, 245,.5),rgb(125, 121, 254,.5),rgb(83, 116, 251,.5))
+                transition: width .1s linear
+            .close
+                background-color: transparent
+                border: none
+                position: absolute
+                right: 20px
+                top: 50%
+                transform: translateY(-50%)
+
+        &__text
+            display: flex
+            flex-direction: column
+            gap: 16px
+            overflow-y: scroll
+            height: 100%
+
+            @include sm
+                gap: 25px
+
+            @include md
+                gap: 40px
+
+            & > picture > img
+                display: block
+                border-radius: 30px
+                aspect-ratio: 16/9
+                object-fit: cover
+                width: 100%
+                margin: 0 auto
+                user-select: none
+
+                @include md
+                    margin: 0
+                    aspect-ratio: 1/1
+                    width: auto
+                    max-width: 360px
+                    max-height: 360px
+
+            & > p
+                font-size: 18px
+                line-height: 1.4
+
+                @include md
+                    font-size: 22px
+
+            .next-sphere
+                font-size: 34px
+                display: inline-block
+                margin: 0 auto
+                font-family: 'BadScript'
+                +gradient-text-color
+
+    &-tags
+        display: flex
+
+    &-actions
+        position: absolute
+        // right: -120px
+        top: 20px
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+        right: -85px
+
+        @include xl
+            right: -120px
+
+        .title
+            font-size: 13px
+            color: #171E2B
+
+        .views
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+
+            div
+                width: 60px
+                height: 60px
+                border-radius: 50%
+                background-color: #171E2B
+                overflow: hidden
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+                gap: 2px
+
+                img
+                    user-select: none
+
+                p
+                    font-size: 13px
+                    font-weight: 500
+        .share
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+
+            button
+                width: 60px
+                height: 60px
+                border-radius: 50%
+                background-color: #171E2B
+                overflow: hidden
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+                border: none
+
+                .share-icon
+                    user-select: none
+
+                    &.hide
+                        display: none
+
+                .tick-icon
+                    display: none
+                    user-select: none
+                    width: 34px
+                    height: 34px
+
+                    &.show
+                        display: block
+
+        .like
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+
+            button
+                width: 60px
+                height: 60px
+                border-radius: 50%
+                background-color: #171E2B
+                overflow: hidden
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+                border: none
+                gap: 6px
+
+                img
+                    user-select: none
+
+                p
+                    font-size: 13px
+                    font-weight: 500
+
+#modal-scroll::-webkit-scrollbar
+    display: none
+    scrollbar-width: none

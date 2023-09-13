@@ -1,0 +1,59 @@
+.first
+    position: relative
+    @include background-image('../img/backgrounds/1.png')
+    &::before
+        @include before-bg-image('../img/noise/1.png')
+
+    // &::before
+    //     content: ''
+    //     position: absolute
+    //     bottom: 85px
+    //     left: 50%
+    //     width: 65px
+    //     height: 25px
+    //     background-image: url('../img/chevron-down.svg')
+    //     background-repeat: no-repeat
+    //     user-select: none
+    //     animation: bounce 3s ease infinite
+    //     z-index: 10
+
+.second
+    position: relative
+    @include background-image('../img/backgrounds/2.png')
+    &::before
+        @include before-bg-image('../img/noise/1.png')
+.third
+    position: relative
+    @include background-image('../img/backgrounds/3.png')
+    &::before
+        @include before-bg-image('../img/noise/1.png')
+.fourth
+    position: relative
+    @include background-image('../img/backgrounds/4.png')
+    &::before
+        @include before-bg-image('../img/noise/1.png')
+.fifth
+    position: relative
+    @include background-image('../img/backgrounds/5.png')
+    &::before
+        @include before-bg-image('../img/noise/1.png',.5)
+.sixth
+    @include background-image('../img/backgrounds/6.png')
+    &::before
+        @include before-bg-image('../img/noise/1.png',.1)
+.seventh
+    @include background-image('../img/backgrounds/7.png')
+    &::before
+        @include before-bg-image('../img/noise/1.png',.1)
+.eighth
+    @include background-image('../img/backgrounds/interesting.png')
+    &::before
+        @include before-bg-image('../img/noise/1.png',.1)
+
+@keyframes bounce
+    0%
+        transform: translateY(0) translateX(-50%)
+    50%
+        transform: translateY(15px) translateX(-50%)
+    100%
+        transform: translateY(0) translateX(-50%)

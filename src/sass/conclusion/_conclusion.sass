@@ -1,0 +1,55 @@
+.conclusion
+    display: flex
+    flex-direction: column
+    gap: 50px
+    padding-bottom: 70px
+
+    &-title
+        font-size: 72px
+        font-weight: 900
+        font-family: 'Gilroy'
+        text-transform: uppercase
+        text-align: center
+
+        +blue-text-outlined
+
+    &-content
+        display: flex
+        align-items: center
+
+        img
+            width: 300px
+            height: 300px
+            object-fit: cover
+            user-select: none
+            margin: 0 auto
+
+    &-info
+        display: flex
+        flex-direction: column
+        gap: 40px
+        max-width: 735px
+        margin-left: auto
+
+        &__question
+            font-size: 22px
+            font-weight: 700
+            max-width: 585px
+        &__layer
+            display: flex
+            align-items: center
+            gap: 10px
+            font-family: 'BadScript'
+            +blue-link-color
+
+            & > span
+                font-size: 34px
+
+            & > a
+                font-size: 35px
+
+                text-decoration: underline
+
+        &__exclamation
+            font-size: 22px
+            font-weight: 700

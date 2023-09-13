@@ -1,0 +1,100 @@
+=limit-line($numLines: 1)
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+
+    @supports (-webkit-line-clamp: $numLines)
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: initial
+        display: -webkit-box
+        -webkit-line-clamp: $numLines
+        -webkit-box-orient: vertical
+
+=blue-text-outlined()
+    background: linear-gradient(91deg, rgba(0, 84, 149, 0.60) 4.02%, rgba(16, 120, 199, 0.60) 63.5%, rgba(0, 57, 168, 0.60) 127.35%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    -webkit-text-stroke: 1px rgb(16, 120, 199)
+
+=gradient-text-color()
+    background: -webkit-linear-gradient(45deg,#A473F3,#A277F5,#7D79FE,#5374FB)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+=blue-text-color()
+    background: linear-gradient(91deg, rgba(0, 84, 149, 0.60) 4.02%, rgba(16, 120, 199, 0.60) 63.5%, rgba(0, 57, 168, 0.60) 127.35%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+=blue-link-color()
+    background: linear-gradient(91deg, rgb(0, 84, 149) 4.02%, rgb(16, 120, 199) 63.5%, rgba(0, 57, 168) 127.35%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+=dark-blue-link-color()
+    background: linear-gradient(91deg, rgb(0, 84, 149) 4.02%, rgb(16, 120, 199) 63.5%, rgba(0, 57, 168) 127.35%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+@mixin background-image($url)
+    background-image: url($url)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+@mixin before-bg-image($url,$opacity: 1)
+    content: ''
+    display: block
+    position: absolute
+    inset: 0
+    z-index: 10
+    user-select: none
+    pointer-events: none
+    opacity: $opacity
+    @include background-image($url)
+
+// Media queries
+@mixin sm
+    @media (min-width: $sm)
+        @content
+
+@mixin md
+    @media (min-width: $md)
+        @content
+
+@mixin lg
+    @media (min-width: $lg)
+        @content
+
+@mixin xl
+    @media (min-width: $xl)
+        @content
+
+@mixin xxl
+    @media (min-width: $xxl)
+        @content
+
+@mixin xxxl
+    @media (min-width: $xxxl)
+        @content
+
+@mixin customMin($breakpoint)
+    @media (min-width: $breakpoint)
+        @content
+
+@mixin customMax($breakpoint)
+    @media (max-width: $breakpoint)
+        @content
+
+// =screen($width)
+//     @media only screen and (max-width: $width + "px")
+//         @content
+
+// =screenmin($width)
+//     @media only screen and (min-width: $width + "px")
+//         @content

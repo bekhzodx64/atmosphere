@@ -1,0 +1,19 @@
+.hamburger.active .line:first-child
+  transform: translateY(7px) rotate(-45deg)
+
+.hamburger.active .line:last-child
+  transform: translateY(-7px) rotate(45deg)
+
+.hamburger.active .line:nth-child(2)
+  opacity: 0
+
+.hamburger
+  width: 100%
+
+.hamburger .line
+  height: 2px
+  background-color: #fff
+  display: block
+  margin: 5px auto
+  border-radius: 100px
+  transition: all 0.3s ease-in-out

@@ -1,0 +1,312 @@
+.home-section-head
+    display: flex
+    justify-content: space-between
+    padding: 0 40px
+    margin-bottom: 30px
+
+    +screen(768)
+        padding: 0 20px
+        margin-bottom: 20px
+
+    &__name
+        font-size: 25px
+        color: $color-white
+        +sfProSemiBold()
+
+        +screen(991)
+            font-size: 18px
+
+        +screen(576)
+            font-size: 16px
+
+    &__see-all
+        display: flex
+        align-items: center
+        font-size: 23px
+        white-space: nowrap
+        margin-left: 10px
+        transition: all .1s
+
+        & path 
+            transition: all .1s
+
+        +screen(991)
+            font-size: 18px
+
+        +screen(576)
+            font-size: 16px
+
+        &:hover
+            color: $color-main-gold
+
+            path 
+                stroke: $color-main-gold
+
+        &:active
+            color: $color-main
+
+            path 
+                stroke: $color-main
+            
+
+        & svg 
+            margin-left: 20px
+
+            +screen(768)
+                margin-left: 10px
+
+.short-navigation
+    padding-left: 20px
+    padding-top: 15px
+    padding-bottom: 15px
+    border-top: 1px solid $color-main
+    border-bottom: 1px solid $color-main
+
+    display: none
+
+    +screen(768)
+        display: block
+
+    &__list
+        display: grid
+        grid-auto-flow: column
+
+        overflow-x: auto
+        grid-gap: 30px
+
+    &__item
+        font-size: 16px
+        padding: 2px 5px
+        white-space: nowrap
+
+        &:last-child
+            padding-right: 20px
+    
+.home-intro
+    max-width: 1500px
+    margin: 0 auto
+    margin-top: 65px
+    margin-bottom: 40px 
+
+    +screen(768)
+        padding:0 20px
+        margin-top: 30px
+
+    &__grid
+        display: grid
+        grid-template-columns: calc( 58% - 30px )  42%
+        grid-template-rows: repeat(2,232px)
+        grid-gap: 30px
+
+        +screen(991)
+            grid-template-columns: 1fr
+
+
+
+    &__item
+        position: relative
+        border-radius: 8px
+        overflow: hidden
+
+        // &:first-child
+        //     grid-column: span 2
+
+        position: relative
+
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            right: 0
+            background-color: rgba(0,0 ,0 ,0.3 )
+            transition: all .02s
+            z-index: 2
+            opacity: 0
+
+        &:hover
+            & picture
+                scale: 1.1
+
+        &:active
+             &::before
+                opacity: 1
+
+        & picture
+            display: flex
+            width: 100%
+            height: 100%
+            transition: scale 0.2s ease-in
+
+            & img
+                object-fit: cover
+                width: 100%
+                height: 100%
+
+        &:nth-child(2),
+        &:nth-child(3)
+            +screen(991)
+                display: none
+            
+
+    &__item.w2
+        .home-intro__title
+            font-size: 22px
+
+    &__img
+        height: 100%
+
+    & picture
+        height: 100%
+        display: flex
+
+        & img
+            object-fit: cover
+
+    &__info
+        position: absolute
+        left: 50%
+        top: 50%
+        translate: -50% -50%
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__title,
+    &__date
+        font-size: 18px
+        color: $color-white
+        padding: 5px 10px
+        border-radius: 40px
+        background-color: rgba($color-black, 0.9)
+
+        +screen(768)
+            font-size: 16px
+
+    &__date
+        font-size: 16px
+
+    &__title
+        margin-bottom: 5px
+
+.authors
+    margin-bottom: 40px
+    position: relative
+
+    &__list
+        padding-left: 40px
+        display: grid
+        justify-content: start
+        grid-gap: 25px
+        grid-auto-flow: column
+        overflow-x: auto
+        grid-auto-columns: 166px
+
+        +screen(991)
+            grid-auto-columns: 120px
+
+        +screen(768)
+            padding-left: 20px
+            grid-gap: 15px
+
+        +screen(576)
+            grid-auto-columns: 70px
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &:hover
+            .authors__img 
+                & picture 
+                    scale: 1.1
+
+            .authors__name 
+                color: $color-main-gold
+
+        &:active
+            .authors__img 
+                &::before
+                    opacity: 1
+
+            .authors__name 
+                color: $color-main
+
+    &__img
+        margin-bottom: 10px
+        max-height: 144px
+        max-width: 144px
+        min-height: 144px
+        min-width: 144px
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $color-gray
+        border-radius: 50%
+        overflow: hidden
+        position: relative
+
+        & picture 
+            transition: all .1s
+
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            right: 0
+            background-color: rgba(0,0 ,0 ,0.3 )
+            transition: all .02s
+            z-index: 2
+            opacity: 0
+
+        +screen(991)
+            max-height: 120px
+            max-width: 120px
+            min-height: 120px
+            min-width: 120px
+
+        +screen(576)
+            max-height: 70px
+            max-width: 70px
+            min-height: 70px
+            min-width: 70px
+
+        & picture
+            object-fit: cover
+            width: 100% 
+            height: 100%
+
+        & img 
+            object-fit: cover
+            width: 100% 
+            height: 100%
+
+    &__name
+        font-size: 24px
+        color: $color-white
+        text-align: center
+        max-width: min-content
+        transition: all .1s
+
+        +screen(991)
+            font-size: 18px
+
+        +screen(576)
+            font-size: 16px
+
+.category-theme
+    margin-bottom: 40px
+    .foot-gallery
+        margin-bottom: 0
+
+    &__body
+        width: 100%
+        padding: 40px 0
+        border-radius: 20px
+        background-color: rgba($color-main, 0.4)
