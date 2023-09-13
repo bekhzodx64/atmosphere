@@ -1103,6 +1103,7 @@ aside img {
   display: flex;
   justify-content: flex-end;
   position: relative;
+  padding: 12.5px 0;
 }
 @media (min-width: 768px) {
   .interesting-content .interesting-item {
