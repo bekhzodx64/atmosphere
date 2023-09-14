@@ -62,14 +62,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 		'.progress-bar .close'
 	)
 	const nextSphere = document.querySelector('.next-sphere')
+	const modalTextContanier = document.querySelector(
+		'.modal-content__description'
+	)
 
 	const setModalData = (obj) => {
+		const paragraphs = obj.description.split('\n')
+
+		paragraphs.forEach((paragraph) => {
+			const p = document.createElement('p')
+			p.textContent = paragraph
+			modalTextContanier.appendChild(p)
+		})
+
 		document.querySelector('.progress-bar h3').innerHTML = obj.title
-		document.querySelector('.modal-content__text p').innerHTML =
-			obj.description
 		document
 			.querySelector('.modal-content__text .next-sphere')
 			.setAttribute('href', `${obj.href}`)
+		document
+			.querySelector('.modal-content__text img')
+			.setAttribute('src', `${obj.image}`)
 	}
 
 	if (readMoreLink) {
@@ -96,12 +108,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 				modal.classList.remove('show')
 				fullpage_api.setAllowScrolling(true)
 				fullpage_api.setKeyboardScrolling(true)
+				setTimeout(() => {
+					modalTextContanier.innerHTML = ''
+				}, 500)
 			}
 		})
 
 		if (nextSphere) {
 			nextSphere.addEventListener('click', () => {
 				modal.classList.remove('show')
+				setTimeout(() => {
+					modalTextContanier.innerHTML = ''
+				}, 500)
 			})
 		}
 	}
@@ -111,6 +129,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 			modal.classList.remove('show')
 			fullpage_api.setAllowScrolling(true)
 			fullpage_api.setKeyboardScrolling(true)
+			setTimeout(() => {
+				modalTextContanier.innerHTML = ''
+			}, 500)
 		})
 	}
 
@@ -119,6 +140,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 			modal.classList.remove('show')
 			fullpage_api.setAllowScrolling(true)
 			fullpage_api.setKeyboardScrolling(true)
+			setTimeout(() => {
+				modalTextContanier.innerHTML = ''
+			}, 500)
 		})
 	}
 

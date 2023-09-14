@@ -1592,7 +1592,7 @@ aside img {
     gap: 40px;
   }
 }
-.modal-content__text > picture > img {
+.modal-content__text > img {
   display: block;
   border-radius: 30px;
   aspect-ratio: 16/9;
@@ -1602,21 +1602,12 @@ aside img {
   user-select: none;
 }
 @media (min-width: 768px) {
-  .modal-content__text > picture > img {
+  .modal-content__text > img {
     margin: 0;
     aspect-ratio: 1/1;
     width: auto;
     max-width: 360px;
     max-height: 360px;
-  }
-}
-.modal-content__text > p {
-  font-size: 18px;
-  line-height: 1.4;
-}
-@media (min-width: 768px) {
-  .modal-content__text > p {
-    font-size: 22px;
   }
 }
 .modal-content__text .next-sphere {
@@ -1627,6 +1618,20 @@ aside img {
   background: -webkit-linear-gradient(45deg, #A473F3, #A277F5, #7D79FE, #5374FB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.modal-content__description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modal-content__description > p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .modal-content__description > p {
+    font-size: 22px;
+  }
 }
 .modal-tags {
   display: flex;

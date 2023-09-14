@@ -108,7 +108,7 @@
 			@include md
 				gap: 40px
 
-			& > picture > img
+			& > img
 				display: block
 				border-radius: 30px
 				aspect-ratio: 16/9
@@ -124,19 +124,24 @@
 					max-width: 360px
 					max-height: 360px
 
-			& > p
-				font-size: 18px
-				line-height: 1.4
-
-				@include md
-					font-size: 22px
-
 			.next-sphere
 				font-size: 34px
 				display: inline-block
 				margin: 0 auto
 				font-family: 'BadScript'
 				+gradient-text-color
+
+		&__description
+			display: flex
+			flex-direction: column
+			gap: 16px
+
+			& > p
+				font-size: 18px
+				line-height: 1.4
+
+				@include md
+					font-size: 22px
 
 	&-tags
 		display: flex
