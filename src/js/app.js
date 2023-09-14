@@ -25,6 +25,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 			'troposphere',
 			'interesting',
 		],
+		afterLoad: function (origin, destination, direction, trigger) {
+			const sectionIndex = destination.index
+			const modalNextButton = document.querySelector(
+				'.modal-content__text .next-sphere'
+			)
+
+			if (sectionIndex == 6) {
+				modalNextButton.style.display = 'none'
+			} else {
+				modalNextButton.style.display = 'inline-block'
+			}
+		},
+		beforeLeave: function (origin, destination, direction, trigger) {
+			const sectionIndex = destination.index
+			const nav = document.querySelector('aside ul')
+			const navItem = document.querySelectorAll('aside ul li')
+
+			if (sectionIndex != 0) {
+				nav.style.marginBottom = '50%'
+				navItem[navItem.length - 1].classList.add('show')
+				navItem[0].classList.add('show')
+			} else {
+				nav.style.marginBottom = '0'
+				navItem[navItem.length - 1].classList.remove('show')
+				navItem[0].classList.remove('show')
+			}
+		},
 	})
 
 	// Read more button / Modal window
@@ -36,16 +63,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 	)
 	const nextSphere = document.querySelector('.next-sphere')
 
-	if (readMoreLink) {
-		// readMoreLink.forEach((link) => {
-		// 	link.addEventListener('click', async (e) => {
-		// 		e.preventDefault()
+	const setModalData = (obj) => {
+		document.querySelector('.progress-bar h3').innerHTML = obj.title
+		document.querySelector('.modal-content__text p').innerHTML =
+			obj.description
+		document
+			.querySelector('.modal-content__text .next-sphere')
+			.setAttribute('href', `${obj.href}`)
+	}
 
-		// 		modal.classList.toggle('show')
-		// 		fullpage_api.setKeyboardScrolling(false)
-		// 		fullpage_api.setAllowScrolling(false)
-		// 	})
-		// })
+	if (readMoreLink) {
+		readMoreLink.forEach((link) => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault()
+				modalContentText.scrollTo(0, 0)
+
+				const linkId = +link.querySelector('.link-id')?.value
+
+				if (linkId) {
+					const currentLinkData = data.find(
+						(item) => item.id === linkId
+					)
+					setModalData(currentLinkData)
+				}
+
+				modal.classList.toggle('show')
+			})
+		})
 
 		document.addEventListener('keydown', (e) => {
 			if (e.key === 'Escape') {
@@ -54,12 +98,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 				fullpage_api.setKeyboardScrolling(true)
 			}
 		})
-	}
 
-	if (nextSphere) {
-		nextSphere.addEventListener('click', () => {
-			fullpage_api.moveSectionDown()
-		})
+		if (nextSphere) {
+			nextSphere.addEventListener('click', () => {
+				modal.classList.remove('show')
+			})
+		}
 	}
 
 	if (mobileModalCloseButton) {
@@ -137,26 +181,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 			progressBar.style.width = `${progress}%`
 		})
 	}
-
-	const setModalData = (obj) => {
-		document.querySelector('.progress-bar h3').innerHTML = obj.title
-		document.querySelector('.modal-content__text p').innerHTML =
-			obj.description
-	}
-
-	readMoreLink.forEach((link) => {
-		link.addEventListener('click', (e) => {
-			e.preventDefault()
-			modalContentText.scrollTo(0, 0)
-
-			const linkId = +link.querySelector('.link-id')?.value
-
-			if (linkId) {
-				const currentLinkData = data.find((item) => item.id === linkId)
-				setModalData(currentLinkData)
-			}
-
-			modal.classList.toggle('show')
-		})
-	})
 })

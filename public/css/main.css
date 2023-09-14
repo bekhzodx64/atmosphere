@@ -285,14 +285,30 @@ aside ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: auto;
   gap: 30px;
+  margin-top: auto;
   pointer-events: all;
+  transition: all 0.7s linear;
 }
 @media (min-width: 992px) {
   aside ul {
     gap: 40px;
   }
+}
+aside ul li {
+  transition: all 0.3s linear;
+}
+aside ul li:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+aside ul li:last-child {
+  opacity: 0;
+  visibility: hidden;
+}
+aside ul li.show {
+  opacity: 1;
+  visibility: visible;
 }
 aside ul a.active {
   font-weight: 900;
@@ -1618,10 +1634,15 @@ aside img {
 .modal-actions {
   position: absolute;
   top: 20px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 20px;
   right: -85px;
+}
+@media (min-width: 992px) {
+  .modal-actions {
+    display: flex;
+  }
 }
 @media (min-width: 1200px) {
   .modal-actions {

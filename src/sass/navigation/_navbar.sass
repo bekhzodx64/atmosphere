@@ -22,12 +22,28 @@ aside
 		display: flex
 		flex-direction: column
 		align-items: center
-		margin-top: auto
 		gap: 30px
+		margin-top: auto
 		pointer-events: all
+		transition: all .7s linear
 
 		@include lg
 			gap: 40px
+
+		li
+			transition: all .3s linear
+
+			&:first-child
+				opacity: 0
+				visibility: hidden
+
+			&:last-child
+				opacity: 0
+				visibility: hidden
+
+			&.show
+				opacity: 1
+				visibility: visible
 
 		a
 			&.active
