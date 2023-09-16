@@ -272,7 +272,7 @@ aside {
   flex-direction: column;
   font-family: "SF-UI";
   font-weight: 500;
-  padding-left: clamp(20px, 4vw, 200px);
+  padding-left: clamp(20px, 5vw, 200px);
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -650,7 +650,7 @@ aside img {
 @media (min-width: 768px) {
   .atmospheres-info h2 {
     text-align: left;
-    padding-left: 100px;
+    padding-left: 130px;
   }
 }
 @media (min-width: 992px) {
@@ -666,7 +666,7 @@ aside img {
 }
 @media (min-width: 768px) {
   .atmospheres-info p {
-    padding-left: 100px;
+    padding-left: 130px;
   }
 }
 @media (min-width: 992px) {
@@ -680,7 +680,7 @@ aside img {
 }
 @media (min-width: 768px) {
   .question {
-    padding: 30px 0 30px 120px;
+    padding: 30px 0 30px 180px;
   }
 }
 @media (min-width: 992px) {
@@ -758,7 +758,7 @@ aside img {
 }
 @media (min-width: 768px) {
   .exosphere {
-    padding: 30px 0 30px 120px;
+    padding: 30px 0 30px 180px;
   }
 }
 @media (min-width: 992px) {
@@ -836,7 +836,7 @@ aside img {
 }
 @media (min-width: 768px) {
   .thermosphere {
-    padding: 30px 0 30px 120px;
+    padding: 30px 0 30px 180px;
   }
 }
 @media (min-width: 992px) {
@@ -897,7 +897,7 @@ aside img {
 }
 @media (min-width: 768px) {
   .mesosphere {
-    padding: 30px 0 30px 120px;
+    padding: 30px 0 30px 180px;
   }
 }
 @media (min-width: 992px) {
@@ -958,7 +958,7 @@ aside img {
 }
 @media (min-width: 768px) {
   .stratosphere {
-    padding: 30px 0 30px 120px;
+    padding: 30px 0 30px 180px;
   }
 }
 @media (min-width: 992px) {
@@ -1019,7 +1019,7 @@ aside img {
 }
 @media (min-width: 768px) {
   .troposphere {
-    padding: 30px 0 30px 120px;
+    padding: 30px 0 30px 180px;
   }
 }
 @media (min-width: 992px) {
@@ -1084,7 +1084,7 @@ aside img {
 }
 @media (min-width: 768px) {
   .interesting {
-    padding: 50px 0 30px 120px;
+    padding: 50px 0 30px 180px;
   }
 }
 @media (min-width: 992px) {
@@ -1205,7 +1205,7 @@ aside img {
 }
 .interesting-content .interesting-item__container {
   display: flex;
-  gap: 25px;
+  gap: 15px;
   flex-wrap: wrap;
   flex: 1 0 0;
 }
