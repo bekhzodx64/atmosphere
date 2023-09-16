@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 			const modalNextButton = document.querySelector(
 				'.modal-content__text .next-sphere'
 			)
+			const statistics = document.querySelectorAll('.statistic')
+			const troposphereDescription = document.querySelector(
+				'.troposphere-description'
+			)
+
+			if (sectionIndex != 6) {
+				troposphereDescription.classList.remove('dark')
+				statistics[4].classList.remove('dark')
+			}
 
 			if (sectionIndex == 6) {
 				modalNextButton.style.display = 'none'
@@ -49,14 +58,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 			if (sectionIndex == 6) {
 				troposphereDescription.classList.add('dark')
-				statistics.forEach((statistic) => {
-					statistic.classList.add('dark')
-				})
+				statistics[4].classList.add('dark')
 			} else {
-				troposphereDescription.classList.remove('dark')
-				statistics.forEach((statistic) => {
-					statistic.classList.remove('dark')
-				})
+				// troposphereDescription.classList.remove('dark')
+				// statistics[4].classList.remove('dark')
 			}
 
 			if (sectionIndex == 6 || sectionIndex == 7) {
