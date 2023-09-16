@@ -310,11 +310,46 @@ aside ul li.show {
   opacity: 1;
   visibility: visible;
 }
-aside ul a.active {
-  font-weight: 900;
-  background: -webkit-linear-gradient(45deg, #A473F3, #A277F5, #7D79FE, #5374FB);
+aside ul li a {
+  font-weight: 500;
+  transition: all 0.1s linear;
+  border-radius: 15px;
+  padding: 14px 28px;
+  border: 1.5px solid transparent;
+}
+aside ul li a.light {
+  color: #ffffff;
+}
+aside ul li a.dark {
+  background: -webkit-linear-gradient(45deg, #005495, #1078C7, #0039A8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+aside ul li a:hover {
+  border: 1.5px solid #fff;
+}
+aside ul li a:active {
+  background: -webkit-linear-gradient(45deg, rgb(0, 238, 255), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1.5px solid #00EEFF !important;
+  box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.3490196078);
+}
+aside ul li a.active {
+  border: 1.5px solid #fff;
+}
+aside ul li:has(.dark) a:active {
+  background: -webkit-linear-gradient(45deg, #005495, #1078C7, #0039A8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1.5px solid #1078C7 !important;
+  box-shadow: 0 0 0 4px rgba(0, 57, 168, 0.5490196078);
+}
+aside ul li:has(.dark) a:hover {
+  border: 1.5px solid #1078C7;
+}
+aside ul li:has(.dark) a.active {
+  border: 1.5px solid #1078C7;
 }
 aside img {
   display: block;
@@ -1033,6 +1068,9 @@ aside img {
     -webkit-box-orient: vertical;
   }
 }
+.troposphere-description.dark {
+  color: #0B161F;
+}
 .troposphere-description p {
   margin-top: clamp(0px, 4vw, 20px);
 }
@@ -1459,6 +1497,9 @@ aside img {
   flex-direction: column;
   gap: 10px;
   margin-top: clamp(12px, 3vw, 20px);
+}
+.statistic.dark {
+  color: #0B161F;
 }
 .statistic-item {
   display: flex;

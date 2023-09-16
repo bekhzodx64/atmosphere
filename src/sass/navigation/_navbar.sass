@@ -45,10 +45,42 @@ aside
 				opacity: 1
 				visibility: visible
 
-		a
-			&.active
-				font-weight: 900
-				+gradient-text-color
+			a
+				font-weight: 500
+				transition: all .1s linear
+				border-radius: 15px
+				padding: 14px 28px
+				border: 1.5px solid transparent
+
+				&.light
+					color: #ffffff
+
+				&.dark
+					+blue-nav-color
+
+				&:hover
+					border: 1.5px solid #fff
+
+				&:active
+					+gradient-nav-link
+					border: 1.5px solid #00EEFF !important
+					box-shadow: 0 0 0 4px #00F0FF59
+
+				&.active
+					border: 1.5px solid #fff
+
+			&:has(.dark)
+				a
+					&:active
+						+blue-nav-color
+						border: 1.5px solid #1078C7 !important
+						box-shadow: 0 0 0 4px #0039A88C
+
+					&:hover
+						border: 1.5px solid #1078C7
+
+					&.active
+						border: 1.5px solid #1078C7
 
 	img
 		display: block

@@ -41,6 +41,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 			const sectionIndex = destination.index
 			const nav = document.querySelector('aside ul')
 			const navItem = document.querySelectorAll('aside ul li')
+			const navLinks = document.querySelectorAll('aside ul li a')
+			const troposphereDescription = document.querySelector(
+				'.troposphere-description'
+			)
+			const statistics = document.querySelectorAll('.statistic')
+
+			if (sectionIndex == 6) {
+				troposphereDescription.classList.add('dark')
+				statistics.forEach((statistic) => {
+					statistic.classList.add('dark')
+				})
+			} else {
+				troposphereDescription.classList.remove('dark')
+				statistics.forEach((statistic) => {
+					statistic.classList.remove('dark')
+				})
+			}
+
+			if (sectionIndex == 6 || sectionIndex == 7) {
+				navLinks.forEach((link) => {
+					// link.style.color = '#005495'
+					link.classList.add('dark')
+					link.classList.remove('light')
+				})
+			} else {
+				navLinks.forEach((link) => {
+					// link.style.color = '#ffffff'
+					link.classList.add('light')
+					link.classList.remove('dark')
+				})
+			}
 
 			if (sectionIndex != 0) {
 				nav.style.marginBottom = '50%'
