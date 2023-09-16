@@ -59,20 +59,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 			if (sectionIndex == 6) {
 				troposphereDescription.classList.add('dark')
 				statistics[4].classList.add('dark')
-			} else {
-				// troposphereDescription.classList.remove('dark')
-				// statistics[4].classList.remove('dark')
 			}
 
 			if (sectionIndex == 6 || sectionIndex == 7) {
 				navLinks.forEach((link) => {
-					// link.style.color = '#005495'
 					link.classList.add('dark')
 					link.classList.remove('light')
 				})
 			} else {
 				navLinks.forEach((link) => {
-					// link.style.color = '#ffffff'
 					link.classList.add('light')
 					link.classList.remove('dark')
 				})
