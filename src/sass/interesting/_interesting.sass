@@ -49,6 +49,7 @@
 			margin-left: auto
 			max-width: min-content
 			text-align: right
+			+blue-text-outlined
 
 			@include md
 				max-width: max-content
@@ -63,6 +64,7 @@
 			position: relative
 
 			padding: 12.5px 0
+			gap: 20px
 
 			@include md
 				align-items: center
@@ -71,6 +73,12 @@
 
 			&:has(.interesting-item__card)
 				justify-content: space-between
+
+			&:not(:has(.interesting-item__card))
+				height: 99px
+
+				@include md
+					height: auto
 
 			&::before
 				content: ''
@@ -111,7 +119,7 @@
 				gap: 8px
 				background-color: #fff
 				border-radius: 14px
-				max-width: 222px
+				width: 200px
 				overflow: hidden
 				padding: 6px
 

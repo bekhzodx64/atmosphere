@@ -797,13 +797,13 @@ aside img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@supports (-webkit-line-clamp: 16) {
+@supports (-webkit-line-clamp: 9) {
   .exosphere-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
     display: -webkit-box;
-    -webkit-line-clamp: 16;
+    -webkit-line-clamp: 9;
     -webkit-box-orient: vertical;
   }
 }
@@ -812,6 +812,23 @@ aside img {
 }
 .exosphere-description p:first-child {
   margin-top: 0;
+}
+@media (min-width: 1200px) {
+  .exosphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 8) {
+    .exosphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+    }
+  }
 }
 @media (min-width: 1400px) {
   .exosphere-description {
@@ -891,6 +908,40 @@ aside img {
 .thermosphere-description p:first-child {
   margin-top: 0;
 }
+@media (min-width: 1200px) {
+  .thermosphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 8) {
+    .thermosphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .thermosphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 9) {
+    .thermosphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
 
 .mesosphere {
   padding: 20px 0;
@@ -952,6 +1003,40 @@ aside img {
 .mesosphere-description p:first-child {
   margin-top: 0;
 }
+@media (min-width: 1200px) {
+  .mesosphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 8) {
+    .mesosphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .mesosphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 9) {
+    .mesosphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
 
 .stratosphere {
   padding: 20px 0;
@@ -1012,6 +1097,40 @@ aside img {
 }
 .stratosphere-description p:first-child {
   margin-top: 0;
+}
+@media (min-width: 1200px) {
+  .stratosphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 8) {
+    .stratosphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .stratosphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 9) {
+    .stratosphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical;
+    }
+  }
 }
 
 .troposphere {
@@ -1076,6 +1195,40 @@ aside img {
 }
 .troposphere-description p:first-child {
   margin-top: 0;
+}
+@media (min-width: 1200px) {
+  .troposphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 8) {
+    .troposphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .troposphere-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 9) {
+    .troposphere-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical;
+    }
+  }
 }
 
 .interesting {
@@ -1143,6 +1296,11 @@ aside img {
   margin-left: auto;
   max-width: min-content;
   text-align: right;
+  background: linear-gradient(91deg, rgba(0, 84, 149, 0.6) 4.02%, rgba(16, 120, 199, 0.6) 63.5%, rgba(0, 57, 168, 0.6) 127.35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(16, 120, 199);
 }
 @media (min-width: 768px) {
   .interesting-header__distance {
@@ -1158,6 +1316,7 @@ aside img {
   justify-content: flex-end;
   position: relative;
   padding: 12.5px 0;
+  gap: 20px;
 }
 @media (min-width: 768px) {
   .interesting-content .interesting-item {
@@ -1168,6 +1327,14 @@ aside img {
 }
 .interesting-content .interesting-item:has(.interesting-item__card) {
   justify-content: space-between;
+}
+.interesting-content .interesting-item:not(:has(.interesting-item__card)) {
+  height: 99px;
+}
+@media (min-width: 768px) {
+  .interesting-content .interesting-item:not(:has(.interesting-item__card)) {
+    height: auto;
+  }
 }
 .interesting-content .interesting-item::before {
   content: "";
@@ -1214,7 +1381,7 @@ aside img {
   gap: 8px;
   background-color: #fff;
   border-radius: 14px;
-  max-width: 222px;
+  width: 200px;
   overflow: hidden;
   padding: 6px;
 }
@@ -1514,7 +1681,7 @@ aside img {
 .modal {
   position: fixed;
   inset: 0;
-  background-color: rgba(132, 189, 255, 0.6);
+  background-color: rgba(132, 189, 255, 0.8);
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -1539,7 +1706,7 @@ aside img {
   height: 36px;
   border-radius: 50%;
   border: none;
-  background-color: rgba(23, 30, 43, 0.5);
+  background-color: rgb(23, 30, 43);
   align-items: center;
   justify-content: center;
   display: none;

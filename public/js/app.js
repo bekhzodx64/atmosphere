@@ -110,9 +110,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 		document
 			.querySelector('.modal-content__text .next-sphere')
 			.setAttribute('href', `${obj.href}`)
-		document
-			.querySelector('.modal-content__text img')
-			.setAttribute('src', `${obj.image}`)
+		// document
+		// 	.querySelector('.modal-content__text img')
+		// 	.setAttribute('src', `${obj.image}`)
 	}
 
 	if (readMoreLink) {
