@@ -173,89 +173,45 @@ body.overflow {
   display: block;
 }
 
-.meteor {
-  display: none;
+.decoration {
   position: absolute;
-  left: 73%;
-  bottom: 40%;
+  z-index: 10;
   user-select: none;
   pointer-events: none;
-  z-index: 10;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  display: none;
 }
-@media (min-width: 1200px) {
-  .meteor {
-    display: block;
-  }
+
+.meteor {
+  right: -45%;
+  top: -25%;
+  display: none;
 }
 
 .satellite {
+  right: -40%;
+  top: -10%;
   display: none;
-  position: absolute;
-  left: 75%;
-  bottom: 40%;
-  user-select: none;
-  pointer-events: none;
-  z-index: 10;
-}
-@media (min-width: 1200px) {
-  .satellite {
-    display: block;
-  }
 }
 
 .lights {
+  right: -35%;
+  top: 0;
   display: none;
-  position: absolute;
-  right: 0;
-  top: 5%;
-  user-select: none;
-  pointer-events: none;
-  z-index: 10;
-}
-@media (min-width: 1200px) {
-  .lights {
-    display: block;
-  }
 }
 
 .stars {
+  right: -35%;
+  top: 0;
   display: none;
-  position: absolute;
-  right: 0;
-  top: 5%;
-  user-select: none;
-  pointer-events: none;
-  z-index: 10;
-}
-@media (min-width: 1200px) {
-  .stars {
-    display: block;
-  }
 }
 
 .aerostat {
+  right: -40%;
+  top: -10%;
   display: none;
-  position: absolute;
-  right: 0;
-  top: 5%;
-  user-select: none;
-  pointer-events: none;
-  z-index: 10;
-}
-@media (min-width: 1200px) {
-  .aerostat {
-    display: block;
-  }
-}
-
-.everest-text {
-  font-family: "BadScript";
-  position: absolute;
-  right: -10%;
-  top: 5%;
-}
-.everest-text p {
-  font-size: 34px;
 }
 
 .fp-watermark {
@@ -645,7 +601,7 @@ aside img {
   background: -webkit-linear-gradient(45deg, #A473F3, #A277F5, #7D79FE, #5374FB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: clamp(45px, 5vw, 100px);
+  font-size: clamp(45px, 5vw, 80px);
 }
 @media (min-width: 768px) {
   .atmospheres-info h2 {
@@ -1738,6 +1694,17 @@ aside img {
   }
 }
 @media (min-width: 1200px) {
+  .modal-content {
+    max-width: 750px;
+  }
+}
+@media (min-width: 1400px) {
+  .modal-content {
+    padding: 50px 150px;
+    max-width: 1050px;
+  }
+}
+@media (min-width: 1600px) {
   .modal-content {
     padding: 50px 150px;
     max-width: 1260px;

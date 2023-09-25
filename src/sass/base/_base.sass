@@ -1,111 +1,66 @@
 *
-    padding: 0
-    margin: 0
-    box-sizing: border-box
+	padding: 0
+	margin: 0
+	box-sizing: border-box
 
 html
-    color: $white
-    font-family: 'SF-Pro'
+	color: $white
+	font-family: 'SF-Pro'
 
 body
-    &.overflow
-        overflow: hidden !important
+	&.overflow
+		overflow: hidden !important
 
 .gradient-link
-    display: flex
-    align-items: center
-    gap: 10px
-    max-width: max-content
-    margin-top: clamp(12px , 3vw, 38px)
+	display: flex
+	align-items: center
+	gap: 10px
+	max-width: max-content
+	margin-top: clamp(12px , 3vw, 38px)
 
-    p
-        font-weight: 900
-        font-size: clamp(18px, 4vw, 22px)
-        +gradient-text-color
+	p
+		font-weight: 900
+		font-size: clamp(18px, 4vw, 22px)
+		+gradient-text-color
 
-    img
-        user-select: none
-        display: block
+	img
+		user-select: none
+		display: block
+
+.decoration
+	position: absolute
+	z-index: 10
+	user-select: none
+	pointer-events: none
+	width: 100%
+	height: 100%
+	object-fit: scale-down
+	display: none
 
 .meteor
-    display: none
-    position: absolute
-    left: 73%
-    bottom: 40%
-    user-select: none
-    pointer-events: none
-    z-index: 10
-
-    @include xl
-        display: block
-
-    // @include customBreakpoint(1850px)
-    //     right: -15%
-    // @include customBreakpoint(1700px)
-    //     right: -25%
-    // @include customBreakpoint(1500px)
-    //     right: -30%
-    // @include customBreakpoint(1420px)
-    //     right: -35%
-    // @include customBreakpoint(1330px)
-    //     display: none
+	right: -45%
+	top: -25%
+	display: none
 
 .satellite
-    display: none
-    position: absolute
-    left: 75%
-    bottom: 40%
-    user-select: none
-    pointer-events: none
-    z-index: 10
-
-    @include xl
-        display: block
+	right: -40%
+	top: -10%
+	display: none
 
 .lights
-    display: none
-    position: absolute
-    right: 0
-    top: 5%
-    user-select: none
-    pointer-events: none
-    z-index: 10
-
-    @include xl
-        display: block
+	right: -35%
+	top: 0
+	display: none
 
 .stars
-    display: none
-    position: absolute
-    right: 0
-    top: 5%
-    user-select: none
-    pointer-events: none
-    z-index: 10
-
-    @include xl
-        display: block
+	right: -35%
+	top: 0
+	display: none
 
 .aerostat
-    display: none
-    position: absolute
-    right: 0
-    top: 5%
-    user-select: none
-    pointer-events: none
-    z-index: 10
-
-    @include xl
-        display: block
-
-.everest-text
-    font-family: 'BadScript'
-    position: absolute
-    right: -10%
-    top: 5%
-
-    p
-        font-size: 34px
+	right: -40%
+	top: -10%
+	display: none
 
 .fp-watermark
-    display: none !important
+	display: none !important

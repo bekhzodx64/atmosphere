@@ -1,37 +1,30 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Tarix
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Tarix
 
-    //- link(rel='stylesheet', href='./plugins/wow-css.css')
-    link(rel='stylesheet', href='./plugins/fullpage.min.css')
-    link(rel='stylesheet', href='./css/main.css')
+		link(rel='stylesheet', href='./plugins/fullpage.min.css')
+		link(rel='stylesheet', href='./css/main.css')
 
-    //Begin head custom Styles
-    block headCustomCssStyle
+		//Begin head custom Styles
+		block headCustomCssStyle
 
-    //Begin head custom Scripts
-    block headCustomScript
+		//Begin head custom Scripts
+		block headCustomScript
 
-  body
-    include ../components/header/header.pug
+	body
+		include ../components/header/header.pug
 
-    main#app
-      block mainContent
+		main#app
+			block mainContent
 
-    block modalHtml
-    block mobile-menu
+			block modalHtml
+			block mobile-menu
 
-    //- include ../components/nav-menu/nav-menu.pug
-    //- include ../components/search/search.pug
+		script(src='./plugins/fullpage.min.js', type='text/javascript', defer)
+		script(src='./js/app.js', defer)
 
-  //- script(src='./plugins/wow.min.js', type='text/javascript')
-  //- script(src='./plugins/libs.js', type='text/javascript')
-  //- script(src='./plugins/soubil.js', type='text/javascript')
-  script(src='./plugins/fullpage.min.js', type='text/javascript', defer)
-  script(src='./js/app.js', defer)
-
-  block endJsCustomScript
+		block endJsCustomScript

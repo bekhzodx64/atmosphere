@@ -1,3 +1,5 @@
+const decorationImages = document.querySelectorAll('.decoration')
+
 // Get data from json
 let data = null
 
@@ -11,6 +13,17 @@ const getDataFromJson = async function () {
 getDataFromJson()
 
 document.addEventListener('DOMContentLoaded', async () => {
+	// Устранение проблемы с отображением декоративных элементов
+	window.addEventListener('resize', () => {
+		decorationImages.forEach((decoration) => {
+			if (window.innerWidth < 1600) {
+				decoration.style.display = 'none'
+			} else {
+				decoration.style.display = 'block'
+			}
+		})
+	})
+
 	// Fullpage Lib
 	const fullpage_api = new fullpage('#fullpage', {
 		menu: '#menu',
