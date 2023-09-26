@@ -3,13 +3,16 @@ block modalHtml
 		include ../buttons/close-button.pug
 
 		.modal-content
-			include ../buttons/modal-actions.pug
+			//- include ../buttons/modal-actions.pug
 
 			.progress-bar
 				h3#modal-title.title Атмосфера
 				.line
 				button.close(type='button')
 					img(src='./img/close-icon.svg', alt='close')
+
+			.overlay-top
+			.overlay-bottom
 
 			#modal-scroll.modal-content__text
 				.modal-content__description

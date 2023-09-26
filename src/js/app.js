@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 		})
 
 		document.addEventListener('keydown', (e) => {
-			if (e.key === 'Escape') {
+			if (e.key === 'Escape' && modal.classList.contains('show')) {
 				modal.classList.remove('show')
 				fullpage_api.setAllowScrolling(true)
 				fullpage_api.setKeyboardScrolling(true)
@@ -187,6 +187,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 			setTimeout(() => {
 				modalTextContanier.innerHTML = ''
 			}, 500)
+		})
+	}
+
+	if (modal) {
+		modal.addEventListener('click', (e) => {
+			const target = e.target
+			if (target.classList.contains('modal')) {
+				modal.classList.remove('show')
+			}
 		})
 	}
 
@@ -238,6 +247,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 	// Modal progress bar
 	const modalContentText = document.querySelector('.modal-content__text')
 	const progressBar = document.querySelector('.progress-bar .line')
+	const overlayTop = document.querySelector('.overlay-top')
+	const overlayBottom = document.querySelector('.overlay-bottom')
 
 	if (modalContentText) {
 		modalContentText.addEventListener('scroll', function () {
@@ -249,4 +260,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 			progressBar.style.width = `${progress}%`
 		})
 	}
+
+	modalContentText.addEventListener('scroll', (e) => {
+		const target = e.target
+		const scrollTop = target.scrollTop
+
+		overlayTop.style.height = Math.min(scrollTop, 150) + 'px'
+		overlayBottom.style.height = Math.max(0, 250 - scrollTop) + 'px'
+	})
 })

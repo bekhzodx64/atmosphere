@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Bad Script';
+    src: url('BadScript-Regular.eot');
+    src: local('Bad Script Regular'), local('BadScript-Regular'),
+        url('BadScript-Regular.eot?#iefix') format('embedded-opentype'),
+        url('BadScript-Regular.woff2') format('woff2'),
+        url('BadScript-Regular.woff') format('woff'),
+        url('BadScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

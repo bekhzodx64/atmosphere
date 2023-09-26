@@ -6,10 +6,8 @@ aside
 	z-index: 50
 	display: none
 	flex-direction: column
-	font-family: 'SF-UI'
-	font-weight: 500
+	font-family: 'Gilroy'
 
-	// font-size: clamp(12px, 5vw, 20px)
 	padding-left: clamp(20px, 5vw, 200px)
 	padding-top: 40px
 	padding-bottom: 40px
@@ -20,17 +18,18 @@ aside
 	ul
 		display: flex
 		flex-direction: column
-		align-items: center
 		gap: 30px
 		margin-top: auto
 		pointer-events: all
-		transition: all .7s linear
+		transition: all .4s linear
 
 		@include lg
-			gap: 40px
+			gap: 10px
 
 		li
-			transition: all .3s linear
+			width: 100%
+			text-align: center
+			transition: all .4s linear
 
 			&:first-child
 				opacity: 0
@@ -39,59 +38,67 @@ aside
 			&:last-child
 				opacity: 0
 				visibility: hidden
+				height: auto
+				max-height: 0
+				transform: scale(0)
+				transform-origin: center
 
 			&.show
 				opacity: 1
 				visibility: visible
+				max-height: 50px
+				transform: scale(1)
 
 			a
+				font-size: 16px
 				font-weight: 500
-				transition: all .1s linear
+				transition: all .3s linear
 				border-radius: 15px
-				padding: 14px 28px
+				padding: 16px 0
 				border: 1.5px solid transparent
+				display: inline-block
+				width: 100%
 
 				&.light
 					color: #ffffff
 
 				&.dark
-					+blue-nav-color
+					color: #0B161F
+					// +blue-nav-color
 
 				&:hover
 					border: 1.5px solid #fff
 
-				&:active
-					+gradient-nav-link
-					border: 1.5px solid #00EEFF !important
-					box-shadow: 0 0 0 4px #00F0FF59
+				// &:active
+				// 	+gradient-nav-link
+				// 	border: 1.5px solid #00EEFF !important
+				// 	box-shadow: 0 0 0 4px #00F0FF59
 
 				&.active
 					border: 1.5px solid #fff
 
 			&:has(.dark)
 				a
-					&:active
-						+blue-nav-color
-						border: 1.5px solid #1078C7 !important
-						box-shadow: 0 0 0 4px #0039A88C
+					// &:active
+					// 	+blue-nav-color
+					// 	border: 1.5px solid #1078C7 !important
+					// 	box-shadow: 0 0 0 4px #0039A88C
 
 					&:hover
-						border: 1.5px solid #1078C7
+						// border: 1.5px solid #1078C7
+						border: 1.5px solid #0B161F
 
 					&.active
-						border: 1.5px solid #1078C7
+						// border: 1.5px solid #1078C7
+						border: 1.5px solid #0B161F
 
 	img
 		display: block
 		width: 100px
 		height: 100px
-		object-fit: cover
+		object-fit: scale-down
 		user-select: none
 
 		@include lg
-			width: 150px
-			height: 150px
-
-		@include xl
-			width: 200px
-			height: 200px
+			width: 160px
+			height: 160px
