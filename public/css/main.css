@@ -1717,13 +1717,19 @@ aside img {
   background-image: linear-gradient(#171E2B, #171E2B, transparent);
   transition: all 0.3s linear;
   pointer-events: none;
+  display: none;
+}
+@media (min-width: 992px) {
+  .modal-content .overlay-top {
+    display: block;
+  }
 }
 .modal-content .overlay-bottom {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 250px;
+  height: 150px;
   background-image: linear-gradient(transparent, #171E2B, #171E2B);
   transition: all 0.3s linear;
   pointer-events: none;
@@ -1743,16 +1749,11 @@ aside img {
   }
 }
 .modal-content .progress-bar .title {
-  font-size: 10px;
+  font-size: 14px;
   position: absolute;
   left: 20px;
   top: 45%;
   transform: translateY(-50%);
-}
-@media (min-width: 768px) {
-  .modal-content .progress-bar .title {
-    font-size: 12px;
-  }
 }
 .modal-content .progress-bar .line {
   width: 0;

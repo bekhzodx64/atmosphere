@@ -77,13 +77,17 @@
 			background-image: linear-gradient(#171E2B,#171E2B, transparent )
 			transition: all .3s linear
 			pointer-events: none
+			display: none
+
+			@include lg
+				display: block
 
 		.overlay-bottom
 			position: absolute
 			left: 0
 			right: 0
 			bottom: 0
-			height: 250px
+			height: 150px
 			background-image: linear-gradient(transparent, #171E2B,#171E2B )
 			transition: all .3s linear
 			pointer-events: none
@@ -101,14 +105,11 @@
 				display: none
 
 			.title
-				font-size: 10px
+				font-size: 14px
 				position: absolute
 				left: 20px
 				top: 45%
 				transform: translateY(-50%)
-
-				@include md
-					font-size: 12px
 
 			.line
 				width: 0

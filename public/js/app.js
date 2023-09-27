@@ -266,6 +266,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 		const scrollTop = target.scrollTop
 
 		overlayTop.style.height = Math.min(scrollTop, 150) + 'px'
-		overlayBottom.style.height = Math.max(0, 250 - scrollTop) + 'px'
+		overlayBottom.style.height = Math.max(0, 100 - scrollTop) + 'px'
 	})
 })
