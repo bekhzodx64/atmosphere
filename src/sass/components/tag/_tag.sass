@@ -1,47 +1,49 @@
 .tag
-    display: flex
-    align-items: center
-    gap: 5px
-    padding: 5px 10px
-    border-radius: 100px
-    max-width: max-content
-    border: 1px solid var(--Gradient-2, #A473F3)
-    background: linear-gradient(88deg, rgba(164, 115, 243, 0.16) 1.56%, rgba(162, 119, 245, 0.16) 32.9%, rgba(125, 121, 254, 0.16) 61.87%, rgba(83, 116, 251, 0.16) 100.86%)
+	display: flex
+	align-items: center
+	gap: 5px
+	padding: 5px 10px
+	border-radius: 100px
+	max-width: max-content
+	border: 1px solid var(--Gradient-2, #A473F3)
+	background: linear-gradient(88deg, rgba(164, 115, 243, 0.16) 1.56%, rgba(162, 119, 245, 0.16) 32.9%, rgba(125, 121, 254, 0.16) 61.87%, rgba(83, 116, 251, 0.16) 100.86%)
 
-    @include xxl
-        padding: 10px 20px
-        gap: 10px
+	@include xxl
+		padding: 10px 20px
+		gap: 10px
 
-    &-image
-        position: relative
-        width: 37px
-        height: 37px
-        user-select: none
+	&-image
+		position: relative
+		width: 37px
+		height: 37px
+		user-select: none
 
-        @include xxl
-            width: 64px
-            height: 64px
+		@include xxl
+			width: 64px
+			height: 64px
 
-        & > img
-            display: block
-            user-select: none
-            width: 100%
-            height: 100%
-            object-fit: cover
+		& > img
+			display: block
+			user-select: none
+			width: 100%
+			height: 100%
+			object-fit: cover
 
-        &__overlay
-            position: absolute
-            inset: 0
-            border-radius: 100px
-            overflow: hidden
-            display: flex
-            align-items: center
-            justify-content: center
-    p
-        font-size: 12px
-        font-weight: 700
-        max-width: 285px
-        +limit-line(1)
+		&__overlay
+			position: absolute
+			inset: 0
+			border-radius: 100px
+			overflow: hidden
+			display: flex
+			align-items: center
+			justify-content: center
+	p
+		font-family: 'Gilroy'
+		font-size: 12px
+		text-decoration: underline
+		font-weight: 700
+		max-width: 285px
+		+limit-line(1)
 
-        @include xxl
-            font-size: 20px
+		@include xxl
+			font-size: 20px

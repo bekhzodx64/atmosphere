@@ -22,10 +22,19 @@
 		padding-right: 50px
 		font-size: clamp(20px, 4vw, 90px)
 
-		+gradient-text-color
+		p
+			&:first-child
+				background: linear-gradient(91deg, rgba(164, 115, 243, 0.2), rgba(83, 116, 251, 0.2))
+				background-clip: text
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				-webkit-text-stroke: 1px rgb(164, 115, 243)
+			&:last-child
+				+gradient-text-color
 
 	&-description
 		font-family: 'SF-Pro'
+		line-height: 1.5
 		max-width: 870px
 		font-size: clamp(18px, 4vw, 22px)
 		margin-top: clamp(12px , 3vw, 38px)
@@ -38,4 +47,4 @@
 				margin-top: 0
 
 		@include xxl
-			@include limit-line(9)
+			@include limit-line(8)

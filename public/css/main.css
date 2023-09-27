@@ -48,13 +48,13 @@
 }
 @font-face {
   font-family: "SF-Pro";
-  src: url("../fonts/sf-pro/SF-Pro-Display-Semibold.woff2");
+  src: url("../fonts/sf-pro/SFProDisplay-Semibold.woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "SF-Pro";
-  src: url("../fonts/sf-pro/SF-Pro-Display-Bold.woff2");
+  src: url("../fonts/sf-pro/SFProDisplay-Bold.woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -667,12 +667,22 @@ aside img {
   text-wrap: balance;
   padding-right: 50px;
   font-size: clamp(20px, 4vw, 90px);
+}
+.question-title p:first-child {
+  background: linear-gradient(91deg, rgba(164, 115, 243, 0.2), rgba(83, 116, 251, 0.2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(164, 115, 243);
+}
+.question-title p:last-child {
   background: -webkit-linear-gradient(45deg, #A473F3, #A277F5, #7D79FE, #5374FB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .question-description {
   font-family: "SF-Pro";
+  line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
   margin-top: clamp(12px, 3vw, 38px);
@@ -702,13 +712,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 9) {
+  @supports (-webkit-line-clamp: 8) {
     .question-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 9;
+      -webkit-line-clamp: 8;
       -webkit-box-orient: vertical;
     }
   }
@@ -1597,7 +1607,9 @@ aside img {
   justify-content: center;
 }
 .tag p {
+  font-family: "Gilroy";
   font-size: 12px;
+  text-decoration: underline;
   font-weight: 700;
   max-width: 285px;
   white-space: nowrap;
