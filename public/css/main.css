@@ -207,11 +207,34 @@ body.overflow {
   top: -25%;
   display: none;
 }
+.meteor-text {
+  position: absolute;
+  right: 250px;
+  top: 100px;
+  font-family: "BadScript";
+  line-height: 1.2;
+  font-style: italic;
+  font-size: 35px;
+  background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .satellite {
   right: -40%;
   top: -10%;
   display: none;
+}
+.satellite-text {
+  position: absolute;
+  right: 150px;
+  bottom: 30%;
+  font-family: "BadScript";
+  font-style: italic;
+  font-size: 35px;
+  background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .lights {
@@ -219,17 +242,66 @@ body.overflow {
   top: 0;
   display: none;
 }
+.lights-text {
+  position: absolute;
+  right: 150px;
+  bottom: 30%;
+  line-height: 1.4;
+  font-family: "BadScript";
+  font-style: italic;
+  font-size: 35px;
+  background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .stars {
   right: -35%;
   top: 0;
   display: none;
 }
+.stars-text {
+  position: absolute;
+  right: 150px;
+  bottom: 30%;
+  line-height: 1.6;
+  font-family: "BadScript";
+  font-style: italic;
+  font-size: 35px;
+  background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .aerostat {
   right: -40%;
   top: -10%;
   display: none;
+}
+.aerostat-text {
+  position: absolute;
+  right: 150px;
+  bottom: 30%;
+  line-height: 1.6;
+  font-family: "BadScript";
+  font-style: italic;
+  font-size: 35px;
+  background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.everest-text {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  line-height: 1.6;
+  font-family: "BadScript";
+  font-style: italic;
+  font-size: 35px;
+  background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fp-watermark {
@@ -520,7 +592,7 @@ aside img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 95vh;
   position: relative;
 }
 @media (min-width: 992px) {
@@ -540,13 +612,13 @@ aside img {
   -webkit-text-stroke-color: white;
   text-wrap: balance;
   font-size: clamp(40px, 5vw, 100px);
-  margin-bottom: clamp(10px, 10vw, 220px);
+  margin-bottom: auto;
 }
 .atmospheres-info {
   display: flex;
   width: 100%;
   max-width: 1370px;
-  margin: 0 auto;
+  margin: auto;
 }
 .atmospheres-info__right {
   position: relative;
@@ -585,7 +657,7 @@ aside img {
 }
 .atmospheres-info__layer span:first-child {
   line-height: 1;
-  font-weight: 800;
+  font-weight: 500;
   font-size: clamp(70px, 10vw, 210px);
 }
 .atmospheres-info__layer span:last-child {
@@ -621,7 +693,7 @@ aside img {
 }
 .atmospheres-info p {
   padding: 0 20px;
-  line-height: 1.4;
+  line-height: 1.5;
   font-size: clamp(18px, 5vw, 25px);
   margin-top: clamp(15px, 3vw, 30px);
 }
@@ -761,6 +833,7 @@ aside img {
 }
 .exosphere-description {
   font-family: "SF-Pro";
+  line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
   margin-top: clamp(12px, 3vw, 38px);
@@ -856,6 +929,7 @@ aside img {
 }
 .thermosphere-description {
   font-family: "SF-Pro";
+  line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
   margin-top: clamp(12px, 3vw, 38px);
@@ -951,6 +1025,7 @@ aside img {
 }
 .mesosphere-description {
   font-family: "SF-Pro";
+  line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
   margin-top: clamp(12px, 3vw, 38px);
@@ -1046,6 +1121,7 @@ aside img {
 }
 .stratosphere-description {
   font-family: "SF-Pro";
+  line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
   margin-top: clamp(12px, 3vw, 38px);
@@ -1141,6 +1217,7 @@ aside img {
 }
 .troposphere-description {
   font-family: "SF-Pro";
+  line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
   margin-top: clamp(12px, 3vw, 38px);
@@ -1609,7 +1686,6 @@ aside img {
 .tag p {
   font-family: "Gilroy";
   font-size: 12px;
-  text-decoration: underline;
   font-weight: 700;
   max-width: 285px;
   white-space: nowrap;

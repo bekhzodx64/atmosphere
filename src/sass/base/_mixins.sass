@@ -28,6 +28,11 @@
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 
+=decor-text
+	background: -webkit-linear-gradient(45deg,rgba(164, 115, 243, 1),rgba(162, 119, 245, 1),rgba(125, 121, 254, 1),rgba(83, 116, 251, 1))
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+
 =blue-text-color()
 	background: linear-gradient(91deg, rgba(0, 84, 149, 0.60) 4.02%, rgba(16, 120, 199, 0.60) 63.5%, rgba(0, 57, 168, 0.60) 127.35%)
 	background-clip: text
@@ -100,11 +105,3 @@
 @mixin customMax($breakpoint)
 	@media (max-width: $breakpoint)
 		@content
-
-// =screen($width)
-//     @media only screen and (max-width: $width + "px")
-//         @content
-
-// =screenmin($width)
-//     @media only screen and (min-width: $width + "px")
-//         @content
