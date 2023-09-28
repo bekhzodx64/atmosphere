@@ -44,13 +44,17 @@ body
 
 	&-text
 		position: absolute
-		right: 250px
-		top: 100px
 		font-family: 'BadScript'
 		line-height: 1.2
 		font-style: italic
 		font-size: 35px
 		+decor-text
+		display: none
+
+		@include xxxl
+			display: block
+			right: 200px
+			top: 50px
 
 .satellite
 	right: -40%
@@ -59,12 +63,16 @@ body
 
 	&-text
 		position: absolute
-		right: 150px
-		bottom: 30%
 		font-family: 'BadScript'
 		font-style: italic
 		font-size: 35px
 		+decor-text
+		display: none
+
+		@include xxxl
+			display: block
+			right: 50px
+			bottom: 25%
 
 .lights
 	right: -35%
@@ -73,14 +81,17 @@ body
 
 	&-text
 		position: absolute
-		right: 150px
-		bottom: 30%
 		line-height: 1.4
 		font-family: 'BadScript'
 		font-style: italic
 		font-size: 35px
 		+decor-text
+		display: none
 
+		@include xxxl
+			display: block
+			right: 150px
+			bottom: 25%
 .stars
 	right: -35%
 	top: 0
@@ -88,13 +99,17 @@ body
 
 	&-text
 		position: absolute
-		right: 150px
-		bottom: 30%
 		line-height: 1.6
 		font-family: 'BadScript'
 		font-style: italic
 		font-size: 35px
 		+decor-text
+		display: none
+
+		@include xxxl
+			display: block
+			right: 100px
+			bottom: 25%
 
 .aerostat
 	right: -40%
@@ -103,24 +118,32 @@ body
 
 	&-text
 		position: absolute
-		right: 150px
-		bottom: 30%
 		line-height: 1.6
 		font-family: 'BadScript'
 		font-style: italic
 		font-size: 35px
-		+decor-text
+		+blue-link-color
+		display: none
+
+		@include xxxl
+			display: block
+			right: 150px
+			bottom: 25%
 
 .everest
 	&-text
 		position: absolute
-		right: 0
-		top: 50px
 		line-height: 1.6
 		font-family: 'BadScript'
 		font-style: italic
 		font-size: 35px
-		+decor-text
+		+blue-link-color
+		display: none
+
+		@include xxxl
+			display: block
+			right: 0
+			top: 50px
 
 .fp-watermark
 	display: none !important

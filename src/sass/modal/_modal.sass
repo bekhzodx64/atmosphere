@@ -67,30 +67,25 @@
 			max-width: 1050px
 
 		@include xxxl
-			padding: 50px 150px
+			padding: 50px 150px 30px
 			max-width: 1260px
-
-		.overlay-top
-			position: absolute
-			inset: 0
-			height: 0
-			background-image: linear-gradient(#171E2B,#171E2B, transparent )
-			transition: all .3s linear
-			pointer-events: none
-			display: none
-
-			@include lg
-				display: block
 
 		.overlay-bottom
 			position: absolute
 			left: 0
 			right: 0
-			bottom: 0
-			height: 150px
-			background-image: linear-gradient(transparent, #171E2B,#171E2B )
-			transition: all .3s linear
+			bottom: 20px
+			height: 250px
+			background-image: linear-gradient(transparent,#171E2B )
+			transition: all .5s linear
 			pointer-events: none
+			z-index: 10
+
+			@include lg
+				bottom: 50px
+
+			@include xxxl
+				bottom: 30px
 
 		.progress-bar
 			position: absolute

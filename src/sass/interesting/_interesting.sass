@@ -7,6 +7,7 @@
 
 	@include lg
 		padding-left: 200px
+		padding-right: 20px
 
 	@include xl
 		padding-left: 300px
@@ -29,7 +30,6 @@
 			transform: rotate(-7.30deg)
 
 	&-header
-
 		@include md
 			display: flex
 			justify-content: space-between
@@ -113,6 +113,10 @@
 				gap: 15px
 				flex-wrap: wrap
 				flex: 1 0 0
+				padding-left: 20px
+
+				@include md
+					padding-left: 0
 
 			&__card
 				display: flex
@@ -122,6 +126,7 @@
 				width: 200px
 				overflow: hidden
 				padding: 6px
+				z-index: 5
 
 				@include md
 					padding: 10px
@@ -182,3 +187,39 @@
 
 				@include md
 					margin-top: 0
+
+		.item-line
+			position: absolute
+			top: 50px
+			width: 100%
+			border-bottom: 2px #005495 dashed
+			z-index: 1
+
+			@include md
+				display: none
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				bottom: 0
+				transform: translateY(50%)
+				background-color: #000
+				width: 10px
+				height: 10px
+				border-radius: 100px
+				background-color: #0039A8
+
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				right: 0
+				bottom: 0
+				transform: translateY(50%)
+				background-color: #000
+				width: 10px
+				height: 10px
+				border-radius: 100px
+				background-color: #0039A8

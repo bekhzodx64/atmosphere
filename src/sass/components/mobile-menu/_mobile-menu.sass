@@ -1,45 +1,45 @@
 .mobile
-  position: fixed
-  inset: 0
-  background-color: #171E2B
-  z-index: 10
-  padding: 60px 0 30px
-  overflow-y: auto
+	position: fixed
+	inset: 0
+	background-color: #171E2B
+	z-index: 10
+	padding: 60px 0 30px
+	overflow-y: auto
 
-  opacity: 0
-  visibility: hidden
-  transition: all .3s ease
+	opacity: 0
+	visibility: hidden
+	transition: all .3s ease
 
-  &.show
-    opacity: 1
-    visibility: visible
+	&.show
+		opacity: 1
+		visibility: visible
 
-  &-title
-    font-size: 20px
-    font-weight: 700
-    font-family: 'SF-UI'
-    text-align: center
+	&-title
+		font-size: 20px
+		font-weight: 700
+		font-family: 'Gilroy'
+		text-align: center
 
-  &-list
-    display: flex
-    flex-direction: column
-    gap: 48px
-    font-family: 'SF-UI'
-    align-items: center
-    margin-top: 48px
-    padding: 0 30px
+	&-list
+		display: flex
+		flex-direction: column
+		gap: 48px
+		font-family: 'Gilroy'
+		align-items: center
+		margin-top: 48px
+		padding: 0 30px
 
-    li
-      a
-        font-weight: 700
-        font-size: 20px
+		li
+			a
+				font-weight: 700
+				font-size: 20px
 
-        &.active
-          +gradient-text-color()
+				&.active
+					+gradient-text-color()
 
-    img
-      width: 128px
-      height: 128px
-      display: block
-      user-select: none
-      pointer-events: none
+			img
+				width: 128px
+				height: 128px
+				display: block
+				user-select: none
+				pointer-events: none

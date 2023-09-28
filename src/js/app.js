@@ -259,13 +259,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 			progressBar.style.width = `${progress}%`
 		})
+
+		modalContentText.addEventListener('scroll', (e) => {
+			const target = e.target
+			const scrollTop = target.scrollTop
+			const scrollHeight = target.scrollHeight
+			const clientHeight = target.clientHeight
+
+			const modalScrollHeight = scrollHeight - clientHeight
+
+			modalScrollHeight === scrollTop
+				? (overlayBottom.style.opacity = 0)
+				: (overlayBottom.style.opacity = 1)
+		})
 	}
-
-	modalContentText.addEventListener('scroll', (e) => {
-		const target = e.target
-		const scrollTop = target.scrollTop
-
-		overlayTop.style.height = Math.min(scrollTop, 150) + 'px'
-		overlayBottom.style.height = Math.max(0, 100 - scrollTop) + 'px'
-	})
 })

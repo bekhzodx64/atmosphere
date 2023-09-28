@@ -209,8 +209,6 @@ body.overflow {
 }
 .meteor-text {
   position: absolute;
-  right: 250px;
-  top: 100px;
   font-family: "BadScript";
   line-height: 1.2;
   font-style: italic;
@@ -218,6 +216,14 @@ body.overflow {
   background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: none;
+}
+@media (min-width: 1600px) {
+  .meteor-text {
+    display: block;
+    right: 200px;
+    top: 50px;
+  }
 }
 
 .satellite {
@@ -227,14 +233,20 @@ body.overflow {
 }
 .satellite-text {
   position: absolute;
-  right: 150px;
-  bottom: 30%;
   font-family: "BadScript";
   font-style: italic;
   font-size: 35px;
   background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: none;
+}
+@media (min-width: 1600px) {
+  .satellite-text {
+    display: block;
+    right: 50px;
+    bottom: 25%;
+  }
 }
 
 .lights {
@@ -244,8 +256,6 @@ body.overflow {
 }
 .lights-text {
   position: absolute;
-  right: 150px;
-  bottom: 30%;
   line-height: 1.4;
   font-family: "BadScript";
   font-style: italic;
@@ -253,6 +263,14 @@ body.overflow {
   background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: none;
+}
+@media (min-width: 1600px) {
+  .lights-text {
+    display: block;
+    right: 150px;
+    bottom: 25%;
+  }
 }
 
 .stars {
@@ -262,8 +280,6 @@ body.overflow {
 }
 .stars-text {
   position: absolute;
-  right: 150px;
-  bottom: 30%;
   line-height: 1.6;
   font-family: "BadScript";
   font-style: italic;
@@ -271,6 +287,14 @@ body.overflow {
   background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: none;
+}
+@media (min-width: 1600px) {
+  .stars-text {
+    display: block;
+    right: 100px;
+    bottom: 25%;
+  }
 }
 
 .aerostat {
@@ -280,28 +304,42 @@ body.overflow {
 }
 .aerostat-text {
   position: absolute;
-  right: 150px;
-  bottom: 30%;
   line-height: 1.6;
   font-family: "BadScript";
   font-style: italic;
   font-size: 35px;
-  background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
+  background: linear-gradient(91deg, rgb(0, 84, 149) 4.02%, rgb(16, 120, 199) 63.5%, rgb(0, 57, 168) 127.35%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: none;
+}
+@media (min-width: 1600px) {
+  .aerostat-text {
+    display: block;
+    right: 150px;
+    bottom: 25%;
+  }
 }
 
 .everest-text {
   position: absolute;
-  right: 0;
-  top: 50px;
   line-height: 1.6;
   font-family: "BadScript";
   font-style: italic;
   font-size: 35px;
-  background: -webkit-linear-gradient(45deg, rgb(164, 115, 243), rgb(162, 119, 245), rgb(125, 121, 254), rgb(83, 116, 251));
+  background: linear-gradient(91deg, rgb(0, 84, 149) 4.02%, rgb(16, 120, 199) 63.5%, rgb(0, 57, 168) 127.35%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: none;
+}
+@media (min-width: 1600px) {
+  .everest-text {
+    display: block;
+    right: 0;
+    top: 50px;
+  }
 }
 
 .fp-watermark {
@@ -762,13 +800,13 @@ aside img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@supports (-webkit-line-clamp: 16) {
+@supports (-webkit-line-clamp: 10) {
   .question-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
     display: -webkit-box;
-    -webkit-line-clamp: 16;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
   }
 }
@@ -778,19 +816,36 @@ aside img {
 .question-description p:first-child {
   margin-top: 0;
 }
+@media (min-width: 768px) {
+  .question-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @supports (-webkit-line-clamp: 7) {
+    .question-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
 @media (min-width: 1400px) {
   .question-description {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 8) {
+  @supports (-webkit-line-clamp: 9) {
     .question-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 9;
       -webkit-box-orient: vertical;
     }
   }
@@ -841,13 +896,13 @@ aside img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@supports (-webkit-line-clamp: 9) {
+@supports (-webkit-line-clamp: 10) {
   .exosphere-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
     display: -webkit-box;
-    -webkit-line-clamp: 9;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
   }
 }
@@ -863,13 +918,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 8) {
+  @supports (-webkit-line-clamp: 7) {
     .exosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 7;
       -webkit-box-orient: vertical;
     }
   }
@@ -937,13 +992,13 @@ aside img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@supports (-webkit-line-clamp: 9) {
+@supports (-webkit-line-clamp: 10) {
   .thermosphere-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
     display: -webkit-box;
-    -webkit-line-clamp: 9;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
   }
 }
@@ -959,13 +1014,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 8) {
+  @supports (-webkit-line-clamp: 7) {
     .thermosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 7;
       -webkit-box-orient: vertical;
     }
   }
@@ -1033,13 +1088,13 @@ aside img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@supports (-webkit-line-clamp: 9) {
+@supports (-webkit-line-clamp: 10) {
   .mesosphere-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
     display: -webkit-box;
-    -webkit-line-clamp: 9;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
   }
 }
@@ -1055,13 +1110,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 8) {
+  @supports (-webkit-line-clamp: 7) {
     .mesosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 7;
       -webkit-box-orient: vertical;
     }
   }
@@ -1129,13 +1184,13 @@ aside img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@supports (-webkit-line-clamp: 9) {
+@supports (-webkit-line-clamp: 10) {
   .stratosphere-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
     display: -webkit-box;
-    -webkit-line-clamp: 9;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
   }
 }
@@ -1151,13 +1206,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 8) {
+  @supports (-webkit-line-clamp: 7) {
     .stratosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 7;
       -webkit-box-orient: vertical;
     }
   }
@@ -1225,13 +1280,13 @@ aside img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@supports (-webkit-line-clamp: 9) {
+@supports (-webkit-line-clamp: 10) {
   .troposphere-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
     display: -webkit-box;
-    -webkit-line-clamp: 9;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
   }
 }
@@ -1250,13 +1305,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 8) {
+  @supports (-webkit-line-clamp: 7) {
     .troposphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 7;
       -webkit-box-orient: vertical;
     }
   }
@@ -1291,6 +1346,7 @@ aside img {
 @media (min-width: 992px) {
   .interesting {
     padding-left: 200px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -1423,6 +1479,12 @@ aside img {
   gap: 15px;
   flex-wrap: wrap;
   flex: 1 0 0;
+  padding-left: 20px;
+}
+@media (min-width: 768px) {
+  .interesting-content .interesting-item__container {
+    padding-left: 0;
+  }
 }
 .interesting-content .interesting-item__card {
   display: flex;
@@ -1432,6 +1494,7 @@ aside img {
   width: 200px;
   overflow: hidden;
   padding: 6px;
+  z-index: 5;
 }
 @media (min-width: 768px) {
   .interesting-content .interesting-item__card {
@@ -1532,6 +1595,44 @@ aside img {
   .interesting-content .interesting-item__distance {
     margin-top: 0;
   }
+}
+.interesting-content .item-line {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  border-bottom: 2px #005495 dashed;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .interesting-content .item-line {
+    display: none;
+  }
+}
+.interesting-content .item-line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  background-color: #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: #0039A8;
+}
+.interesting-content .item-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  background-color: #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: #0039A8;
 }
 
 .conclusion {
@@ -1649,7 +1750,7 @@ aside img {
   border: 1px solid var(--Gradient-2, #A473F3);
   background: linear-gradient(88deg, rgba(164, 115, 243, 0.16) 1.56%, rgba(162, 119, 245, 0.16) 32.9%, rgba(125, 121, 254, 0.16) 61.87%, rgba(83, 116, 251, 0.16) 100.86%);
 }
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .tag {
     padding: 10px 20px;
     gap: 10px;
@@ -1794,33 +1895,30 @@ aside img {
 }
 @media (min-width: 1600px) {
   .modal-content {
-    padding: 50px 150px;
+    padding: 50px 150px 30px;
     max-width: 1260px;
-  }
-}
-.modal-content .overlay-top {
-  position: absolute;
-  inset: 0;
-  height: 0;
-  background-image: linear-gradient(#171E2B, #171E2B, transparent);
-  transition: all 0.3s linear;
-  pointer-events: none;
-  display: none;
-}
-@media (min-width: 992px) {
-  .modal-content .overlay-top {
-    display: block;
   }
 }
 .modal-content .overlay-bottom {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 150px;
-  background-image: linear-gradient(transparent, #171E2B, #171E2B);
-  transition: all 0.3s linear;
+  bottom: 20px;
+  height: 250px;
+  background-image: linear-gradient(transparent, #171E2B);
+  transition: all 0.5s linear;
   pointer-events: none;
+  z-index: 10;
+}
+@media (min-width: 992px) {
+  .modal-content .overlay-bottom {
+    bottom: 50px;
+  }
+}
+@media (min-width: 1600px) {
+  .modal-content .overlay-bottom {
+    bottom: 30px;
+  }
 }
 .modal-content .progress-bar {
   position: absolute;
@@ -2059,14 +2157,14 @@ aside img {
 .mobile-title {
   font-size: 20px;
   font-weight: 700;
-  font-family: "SF-UI";
+  font-family: "Gilroy";
   text-align: center;
 }
 .mobile-list {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  font-family: "SF-UI";
+  font-family: "Gilroy";
   align-items: center;
   margin-top: 48px;
   padding: 0 30px;
@@ -2080,7 +2178,7 @@ aside img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.mobile-list img {
+.mobile-list li img {
   width: 128px;
   height: 128px;
   display: block;
