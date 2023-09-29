@@ -5,8 +5,14 @@
 	padding: 5px 10px
 	border-radius: 100px
 	max-width: max-content
-	border: 1px solid var(--Gradient-2, #A473F3)
-	background: linear-gradient(88deg, rgba(164, 115, 243, 0.16) 1.56%, rgba(162, 119, 245, 0.16) 32.9%, rgba(125, 121, 254, 0.16) 61.87%, rgba(83, 116, 251, 0.16) 100.86%)
+
+	&.primary
+		border: 1px solid var(--Gradient-2, #A473F3)
+		background: linear-gradient(88deg, rgba(164, 115, 243, 0.16) 1.56%, rgba(162, 119, 245, 0.16) 32.9%, rgba(125, 121, 254, 0.16) 61.87%, rgba(83, 116, 251, 0.16) 100.86%)
+
+	&.secondary
+		border: 1px solid rgb(0, 84, 149)
+		background: linear-gradient(88deg, rgba(0, 84, 149, 0.6),rgba(16, 120, 199, 0.6),rgba(0, 57, 168, 0.6))
 
 	@include xxl
 		padding: 10px 20px

@@ -21,11 +21,18 @@ body
 	p
 		font-weight: 900
 		font-size: clamp(18px, 4vw, 22px)
-		+gradient-text-color
 
 	img
 		user-select: none
 		display: block
+
+	&.primary
+		p
+			+gradient-text-color
+
+	&.secondary
+		p
+			+blue-gradient-text
 
 .decoration
 	position: absolute
