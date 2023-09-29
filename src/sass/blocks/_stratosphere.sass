@@ -21,8 +21,7 @@
 		text-wrap: balance
 		padding-right: 50px
 		font-size: clamp(20px, 4vw, 90px)
-
-		+gradient-text-color
+		+blue-gradient-text
 
 	&-description
 		font-family: 'SF-Pro'
@@ -31,6 +30,9 @@
 		font-size: clamp(18px, 4vw, 22px)
 		margin-top: clamp(12px , 3vw, 38px)
 		@include limit-line(10)
+
+		&.dark
+			color: #0B161F
 
 		p
 			margin-top: clamp(0px, 4vw, 20px)

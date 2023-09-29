@@ -47,10 +47,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 			const troposphereDescription = document.querySelector(
 				'.troposphere-description'
 			)
+			const stratosphereDescription = document.querySelector(
+				'.stratosphere-description'
+			)
 
 			if (sectionIndex != 6) {
 				troposphereDescription.classList.remove('dark')
 				statistics[4].classList.remove('dark')
+			}
+
+			if (sectionIndex != 5) {
+				stratosphereDescription.classList.remove('dark')
+				statistics[3].classList.remove('dark')
 			}
 
 			if (sectionIndex == 6) {
@@ -68,13 +76,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 				'.troposphere-description'
 			)
 			const statistics = document.querySelectorAll('.statistic')
+			const stratosphereDescription = document.querySelector(
+				'.stratosphere-description'
+			)
 
 			if (sectionIndex == 6) {
 				troposphereDescription.classList.add('dark')
 				statistics[4].classList.add('dark')
 			}
 
-			if (sectionIndex == 6 || sectionIndex == 7) {
+			if (sectionIndex == 5) {
+				stratosphereDescription.classList.add('dark')
+				statistics[3].classList.add('dark')
+			}
+
+			if (sectionIndex == 5 || sectionIndex == 6 || sectionIndex == 7) {
 				navLinks.forEach((link) => {
 					link.classList.add('dark')
 					link.classList.remove('light')

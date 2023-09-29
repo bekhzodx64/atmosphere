@@ -1170,7 +1170,7 @@ aside img {
   text-wrap: balance;
   padding-right: 50px;
   font-size: clamp(20px, 4vw, 90px);
-  background: -webkit-linear-gradient(45deg, #A473F3, #A277F5, #7D79FE, #5374FB);
+  background: linear-gradient(91deg, rgb(0, 84, 149) 4.02%, rgb(16, 120, 199) 63.5%, rgb(0, 57, 168) 127.35%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1193,6 +1193,9 @@ aside img {
     -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
   }
+}
+.stratosphere-description.dark {
+  color: #0B161F;
 }
 .stratosphere-description p {
   margin-top: clamp(0px, 4vw, 20px);
@@ -1266,7 +1269,7 @@ aside img {
   text-wrap: balance;
   padding-right: 50px;
   font-size: clamp(20px, 4vw, 90px);
-  background: -webkit-linear-gradient(45deg, #A473F3, #A277F5, #7D79FE, #5374FB);
+  background: linear-gradient(91deg, rgb(0, 84, 149) 4.02%, rgb(16, 120, 199) 63.5%, rgb(0, 57, 168) 127.35%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1750,7 +1753,7 @@ aside img {
   border: 1px solid var(--Gradient-2, #A473F3);
   background: linear-gradient(88deg, rgba(164, 115, 243, 0.16) 1.56%, rgba(162, 119, 245, 0.16) 32.9%, rgba(125, 121, 254, 0.16) 61.87%, rgba(83, 116, 251, 0.16) 100.86%);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .tag {
     padding: 10px 20px;
     gap: 10px;
