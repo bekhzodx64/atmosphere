@@ -637,7 +637,7 @@ aside img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 95vh;
+  min-height: 98vh;
   position: relative;
 }
 @media (min-width: 992px) {
@@ -732,7 +732,7 @@ aside img {
 .atmospheres-info p {
   padding: 0 20px;
   line-height: 1.5;
-  font-size: clamp(18px, 5vw, 25px);
+  font-size: clamp(18px, 5vw, 22px);
   margin-top: clamp(15px, 3vw, 20px);
 }
 @media (min-width: 768px) {
