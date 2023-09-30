@@ -56,24 +56,17 @@
 				margin-bottom: 0
 				position: absolute
 				left: -18%
-				bottom: 95%
+				bottom: 100%
 				transform: rotate(-7.3deg)
 
 			span
 				font-family: 'Gilroy'
+				line-height: 1
+				font-weight: 900
+				font-size: clamp(20px , 10vw , 60px)
 
-				&:first-child
-					line-height: 1
-					font-weight: 500
-					font-size: clamp(70px, 10vw, 210px)
-
-				&:last-child
-					line-height: 1
-					font-weight: 900
-					font-size: clamp(50px , 10vw , 100px)
-
-					@include xl
-						line-height: 1.3
+				@include xl
+					line-height: 1.3
 
 		h2
 			font-weight: 900
@@ -94,7 +87,7 @@
 			padding: 0 20px
 			line-height: 1.5
 			font-size: clamp(18px, 5vw, 25px)
-			margin-top: clamp(15px , 3vw, 30px)
+			margin-top: clamp(15px , 3vw, 20px)
 
 			@include md
 				padding-left: 130px

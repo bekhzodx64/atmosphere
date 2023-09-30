@@ -693,25 +693,18 @@ aside img {
     margin-bottom: 0;
     position: absolute;
     left: -18%;
-    bottom: 95%;
+    bottom: 100%;
     transform: rotate(-7.3deg);
   }
 }
 .atmospheres-info__layer span {
   font-family: "Gilroy";
-}
-.atmospheres-info__layer span:first-child {
-  line-height: 1;
-  font-weight: 500;
-  font-size: clamp(70px, 10vw, 210px);
-}
-.atmospheres-info__layer span:last-child {
   line-height: 1;
   font-weight: 900;
-  font-size: clamp(50px, 10vw, 100px);
+  font-size: clamp(20px, 10vw, 60px);
 }
 @media (min-width: 1200px) {
-  .atmospheres-info__layer span:last-child {
+  .atmospheres-info__layer span {
     line-height: 1.3;
   }
 }
@@ -740,7 +733,7 @@ aside img {
   padding: 0 20px;
   line-height: 1.5;
   font-size: clamp(18px, 5vw, 25px);
-  margin-top: clamp(15px, 3vw, 30px);
+  margin-top: clamp(15px, 3vw, 20px);
 }
 @media (min-width: 768px) {
   .atmospheres-info p {
