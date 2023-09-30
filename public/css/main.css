@@ -177,7 +177,7 @@ body.overflow {
   align-items: center;
   gap: 10px;
   max-width: max-content;
-  margin-top: clamp(12px, 3vw, 38px);
+  margin-top: clamp(12px, 3vw, 30px);
 }
 .gradient-link p {
   font-weight: 900;
@@ -911,7 +911,7 @@ aside img {
   line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
-  margin-top: clamp(12px, 3vw, 38px);
+  margin-top: clamp(12px, 3vw, 30px);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -927,7 +927,7 @@ aside img {
   }
 }
 .exosphere-description p {
-  margin-top: clamp(0px, 4vw, 20px);
+  margin-top: clamp(0px, 4vw, 15px);
 }
 .exosphere-description p:first-child {
   margin-top: 0;
@@ -1007,7 +1007,7 @@ aside img {
   line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
-  margin-top: clamp(12px, 3vw, 38px);
+  margin-top: clamp(12px, 3vw, 30px);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1023,7 +1023,7 @@ aside img {
   }
 }
 .thermosphere-description p {
-  margin-top: clamp(0px, 4vw, 20px);
+  margin-top: clamp(0px, 4vw, 15px);
 }
 .thermosphere-description p:first-child {
   margin-top: 0;
@@ -1103,7 +1103,7 @@ aside img {
   line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
-  margin-top: clamp(12px, 3vw, 38px);
+  margin-top: clamp(12px, 3vw, 30px);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1119,7 +1119,7 @@ aside img {
   }
 }
 .mesosphere-description p {
-  margin-top: clamp(0px, 4vw, 20px);
+  margin-top: clamp(0px, 4vw, 15px);
 }
 .mesosphere-description p:first-child {
   margin-top: 0;
@@ -1199,7 +1199,7 @@ aside img {
   line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
-  margin-top: clamp(12px, 3vw, 38px);
+  margin-top: clamp(12px, 3vw, 30px);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1218,7 +1218,7 @@ aside img {
   color: #0B161F;
 }
 .stratosphere-description p {
-  margin-top: clamp(0px, 4vw, 20px);
+  margin-top: clamp(0px, 4vw, 15px);
 }
 .stratosphere-description p:first-child {
   margin-top: 0;
@@ -1298,7 +1298,7 @@ aside img {
   line-height: 1.5;
   max-width: 870px;
   font-size: clamp(18px, 4vw, 22px);
-  margin-top: clamp(12px, 3vw, 38px);
+  margin-top: clamp(12px, 3vw, 30px);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1317,7 +1317,7 @@ aside img {
   color: #0B161F;
 }
 .troposphere-description p {
-  margin-top: clamp(0px, 4vw, 20px);
+  margin-top: clamp(0px, 4vw, 15px);
 }
 .troposphere-description p:first-child {
   margin-top: 0;
@@ -1750,11 +1750,11 @@ aside img {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: clamp(12px, 3vw, 38px);
+  margin-top: clamp(12px, 3vw, 30px);
 }
 @media (min-width: 768px) {
   .tags {
-    gap: 15px 20px;
+    gap: 10px 20px;
   }
 }
 
@@ -1836,8 +1836,8 @@ aside img {
 .statistic {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: clamp(12px, 3vw, 20px);
+  gap: 8px;
+  margin-top: clamp(12px, 3vw, 15px);
 }
 .statistic.dark {
   color: #0B161F;
