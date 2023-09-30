@@ -1835,7 +1835,7 @@ aside img {
   gap: 5px;
   font-size: clamp(18px, 5vw, 22px);
 }
-.statistic-item p:last-child {
+.statistic-item p:first-child {
   font-weight: 700;
 }
 

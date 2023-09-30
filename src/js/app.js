@@ -212,6 +212,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 			if (target.classList.contains('modal')) {
 				modal.classList.remove('show')
 			}
+			setTimeout(() => {
+				modalTextContanier.innerHTML = ''
+			}, 500)
 		})
 	}
 
