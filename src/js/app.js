@@ -263,7 +263,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 	// Modal progress bar
 	const modalContentText = document.querySelector('.modal-content__text')
 	const progressBar = document.querySelector('.progress-bar .line')
-	const overlayTop = document.querySelector('.overlay-top')
 	const overlayBottom = document.querySelector('.overlay-bottom')
 
 	if (modalContentText) {

@@ -1376,18 +1376,13 @@ aside img {
   text-transform: uppercase;
   text-wrap: balance;
   font-size: clamp(50px, 4vw, 80px);
-  margin-bottom: clamp(14px, 6vw, 100px);
+  margin-bottom: clamp(14px, 6vw, 40px);
   display: inline-block;
   background: linear-gradient(91deg, rgba(0, 84, 149, 0.6) 4.02%, rgba(16, 120, 199, 0.6) 63.5%, rgba(0, 57, 168, 0.6) 127.35%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgb(16, 120, 199);
-}
-@media (min-width: 768px) {
-  .interesting-title {
-    transform: rotate(-7.3deg);
-  }
 }
 @media (min-width: 768px) {
   .interesting-header {
