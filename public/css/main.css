@@ -397,15 +397,10 @@ aside {
 aside ul {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   margin-top: auto;
   pointer-events: all;
   transition: all 0.4s linear;
-}
-@media (min-width: 992px) {
-  aside ul {
-    gap: 10px;
-  }
 }
 aside ul li {
   width: 100%;
@@ -661,12 +656,13 @@ aside img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 98vh;
+  min-height: 80vh;
   position: relative;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .atmospheres {
     padding: 40px 0;
+    min-height: 98vh;
   }
 }
 .atmospheres-title {
@@ -712,7 +708,7 @@ aside img {
     justify-content: flex-start;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .atmospheres-info__layer {
     margin-bottom: 0;
     position: absolute;

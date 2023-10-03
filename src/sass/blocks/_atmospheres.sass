@@ -2,11 +2,12 @@
 	display: flex
 	flex-direction: column
 	justify-content: center
-	min-height: 98vh
+	min-height: 80vh
 	position: relative
 
-	@include lg
+	@include md
 		padding: 40px 0
+		min-height: 98vh
 
 	&-title
 		font-family: 'Gilroy'
@@ -52,7 +53,7 @@
 			@include md
 				justify-content: flex-start
 
-			@include lg
+			@include xl
 				margin-bottom: 0
 				position: absolute
 				left: -18%
