@@ -1904,6 +1904,9 @@ aside img {
   padding: 60px 20px 20px;
   position: relative;
 }
+.modal-content.light {
+  background-color: #d0ecff;
+}
 @media (min-width: 992px) {
   .modal-content {
     padding: 50px;
@@ -1932,12 +1935,14 @@ aside img {
   left: 0;
   right: 0;
   bottom: 20px;
-  height: 250px;
+  height: 100px;
   background-image: linear-gradient(transparent, #171E2B);
   transition: all 0.5s linear;
   pointer-events: none;
   z-index: 10;
-  display: none;
+}
+.modal-content .overlay-bottom.light {
+  background-color: #d0ecff;
 }
 @media (min-width: 992px) {
   .modal-content .overlay-bottom {
@@ -2022,7 +2027,7 @@ aside img {
 .modal-content__text .next-sphere {
   font-size: 34px;
   display: inline-block;
-  margin: 0 auto;
+  margin: auto auto 0;
   font-family: "BadScript";
   background: -webkit-linear-gradient(45deg, #A473F3, #A277F5, #7D79FE, #5374FB);
   -webkit-background-clip: text;
@@ -2032,6 +2037,9 @@ aside img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.modal-content__description.dark > p {
+  color: #0B161F;
 }
 .modal-content__description > p {
   font-size: 18px;

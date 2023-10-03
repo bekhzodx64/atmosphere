@@ -50,6 +50,9 @@
 		padding: 60px 20px 20px
 		position: relative
 
+		&.light
+			background-color: #d0ecff
+
 		// opacity: 0
 		// transition: all .5s linear
 		// transition-delay: .3s
@@ -75,19 +78,20 @@
 			left: 0
 			right: 0
 			bottom: 20px
-			height: 250px
+			height: 100px
 			background-image: linear-gradient(transparent,#171E2B )
 			transition: all .5s linear
 			pointer-events: none
 			z-index: 10
-			display: none
+
+			&.light
+				background-color: #d0ecff
 
 			@include lg
 				bottom: 50px
 
 			@include xxxl
 				bottom: 30px
-
 
 		.progress-bar
 			position: absolute
@@ -153,7 +157,7 @@
 			.next-sphere
 				font-size: 34px
 				display: inline-block
-				margin: 0 auto
+				margin: auto auto 0
 				font-family: 'BadScript'
 				+gradient-text-color
 
@@ -161,6 +165,10 @@
 			display: flex
 			flex-direction: column
 			gap: 16px
+
+			&.dark
+				& > p
+					color: #0B161F
 
 			& > p
 				font-size: 18px

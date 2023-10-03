@@ -1,5 +1,4 @@
 const decorationImages = document.querySelectorAll('.decoration')
-const decorationTexts = document.querySelectorAll('.decoration-text')
 
 // Get data from json
 let data = null
@@ -18,11 +17,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 		decoration.style.opacity = 1
 	})
 
-	decorationTexts.forEach((text) => {
-		text.style.opacity = 1
-	})
-
-
 	// Fullpage Lib
 	const fullpage_api = new fullpage('#fullpage', {
 		menu: '#menu',
@@ -36,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 			'stratosphere',
 			'troposphere',
 			'interesting',
-			],
+		],
 		afterLoad: function (origin, destination, direction, trigger) {
 			const sectionIndex = destination.index
 			const modalNextButton = document.querySelector(
@@ -49,6 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 			const stratosphereDescription = document.querySelector(
 				'.stratosphere-description'
 			)
+
 
 			if (sectionIndex != 6) {
 				troposphereDescription.classList.remove('dark')
@@ -79,15 +74,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 				'.stratosphere-description'
 			)
 
+			const modalContent = document.querySelector('.modal-content')
+			const modalContentDescription = document.querySelector(
+				'.modal-content__description'
+			)
+			const modalOverlayBottom = document.querySelector('.overlay-bottom')
+
 			if (sectionIndex == 6) {
 				troposphereDescription.classList.add('dark')
 				statistics[4].classList.add('dark')
+				// modalContentDescription.classList.add('dark')
 			}
 
 			if (sectionIndex == 5) {
 				stratosphereDescription.classList.add('dark')
 				statistics[3].classList.add('dark')
 			}
+
+			sectionIndex == 5 || sectionIndex == 6 ? modalContentDescription.classList.add('dark') : modalContentDescription.classList.remove('dark')
+			sectionIndex == 5 || sectionIndex == 6 ? modalContent.classList.add('light') : modalContent.classList.remove('light')
+			sectionIndex == 5 || sectionIndex == 6 ? modalOverlayBottom.classList.add('light') : modalOverlayBottom.classList.remove('light')
 
 			if (sectionIndex == 5 || sectionIndex == 6 || sectionIndex == 7) {
 				navLinks.forEach((link) => {
