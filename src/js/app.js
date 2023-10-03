@@ -1,4 +1,5 @@
 const decorationImages = document.querySelectorAll('.decoration')
+const decorationTexts = document.querySelectorAll('.decoration-text')
 
 // Get data from json
 let data = null
@@ -13,16 +14,14 @@ const getDataFromJson = async function () {
 getDataFromJson()
 
 document.addEventListener('DOMContentLoaded', async () => {
-	// Устранение проблемы с отображением декоративных элементов
-	window.addEventListener('resize', () => {
-		decorationImages.forEach((decoration) => {
-			if (window.innerWidth < 1600) {
-				decoration.style.display = 'none'
-			} else {
-				decoration.style.display = 'block'
-			}
-		})
+	decorationImages.forEach((decoration) => {
+		decoration.style.opacity = 1
 	})
+
+	decorationTexts.forEach((text) => {
+		text.style.opacity = 1
+	})
+
 
 	// Fullpage Lib
 	const fullpage_api = new fullpage('#fullpage', {
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 			'stratosphere',
 			'troposphere',
 			'interesting',
-		],
+			],
 		afterLoad: function (origin, destination, direction, trigger) {
 			const sectionIndex = destination.index
 			const modalNextButton = document.querySelector(
@@ -125,6 +124,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const modalTextContanier = document.querySelector(
 		'.modal-content__description'
 	)
+	const modalContent = document.querySelector('.modal-content')
 
 	const setModalData = (obj) => {
 		const paragraphs = obj.description.split('\n')
@@ -208,13 +208,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	if (modal) {
 		modal.addEventListener('click', (e) => {
-			const target = e.target
-			if (target.classList.contains('modal')) {
-				modal.classList.remove('show')
-			}
+			modal.classList.remove('show')
+
 			setTimeout(() => {
 				modalTextContanier.innerHTML = ''
 			}, 500)
+		})
+
+		modalContent.addEventListener('click', (e) => {
+			e.stopPropagation()
 		})
 	}
 

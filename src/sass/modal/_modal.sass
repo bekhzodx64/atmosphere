@@ -57,17 +57,17 @@
 
 		@include lg
 			padding: 50px
-			max-width: 650px
+			max-width: 768px
 
 		@include xl
-			max-width: 750px
+			max-width: 992px
 
 		@include xxl
-			padding: 50px 150px
-			max-width: 1050px
+			padding: 50px 60px 30px 150px
+			max-width: 1150px
 
 		@include xxxl
-			padding: 50px 150px 30px
+			padding: 50px 60px 30px 150px
 			max-width: 1260px
 
 		.overlay-bottom
@@ -80,12 +80,14 @@
 			transition: all .5s linear
 			pointer-events: none
 			z-index: 10
+			display: none
 
 			@include lg
 				bottom: 50px
 
 			@include xxxl
 				bottom: 30px
+
 
 		.progress-bar
 			position: absolute
@@ -272,7 +274,7 @@
 					font-weight: 500
 
 #modal-scroll
-	padding-right: 10px
+	padding-right: 30px
 
 #modal-scroll::-webkit-scrollbar
 	background-color: transparent

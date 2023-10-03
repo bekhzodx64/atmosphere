@@ -206,13 +206,20 @@ body.overflow {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
-  display: none;
+  opacity: 0;
+}
+@media (max-width: 1599px) {
+  .decoration {
+    display: none;
+  }
+}
+.decoration-text {
+  opacity: 0;
 }
 
 .meteor {
   right: -45%;
   top: -25%;
-  display: none;
 }
 .meteor-text {
   position: absolute;
@@ -236,7 +243,6 @@ body.overflow {
 .satellite {
   right: -40%;
   top: -10%;
-  display: none;
 }
 .satellite-text {
   position: absolute;
@@ -260,7 +266,6 @@ body.overflow {
 .lights {
   right: -35%;
   top: 0;
-  display: none;
 }
 .lights-text {
   position: absolute;
@@ -284,7 +289,6 @@ body.overflow {
 .stars {
   right: -35%;
   top: 0;
-  display: none;
 }
 .stars-text {
   position: absolute;
@@ -308,7 +312,6 @@ body.overflow {
 .aerostat {
   right: -40%;
   top: -10%;
-  display: none;
 }
 .aerostat-text {
   position: absolute;
@@ -412,6 +415,7 @@ aside ul li {
 aside ul li:first-child {
   opacity: 0;
   visibility: hidden;
+  margin-bottom: 15px;
 }
 aside ul li:last-child {
   opacity: 0;
@@ -1903,23 +1907,23 @@ aside img {
 @media (min-width: 992px) {
   .modal-content {
     padding: 50px;
-    max-width: 650px;
+    max-width: 768px;
   }
 }
 @media (min-width: 1200px) {
   .modal-content {
-    max-width: 750px;
+    max-width: 992px;
   }
 }
 @media (min-width: 1400px) {
   .modal-content {
-    padding: 50px 150px;
-    max-width: 1050px;
+    padding: 50px 60px 30px 150px;
+    max-width: 1150px;
   }
 }
 @media (min-width: 1600px) {
   .modal-content {
-    padding: 50px 150px 30px;
+    padding: 50px 60px 30px 150px;
     max-width: 1260px;
   }
 }
@@ -1933,6 +1937,7 @@ aside img {
   transition: all 0.5s linear;
   pointer-events: none;
   z-index: 10;
+  display: none;
 }
 @media (min-width: 992px) {
   .modal-content .overlay-bottom {
@@ -2148,7 +2153,7 @@ aside img {
 }
 
 #modal-scroll {
-  padding-right: 10px;
+  padding-right: 30px;
 }
 
 #modal-scroll::-webkit-scrollbar {
