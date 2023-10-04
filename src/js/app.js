@@ -139,28 +139,40 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const modalContent = document.querySelector('.modal-content')
 
 	const setModalData = (obj) => {
-
-		const description = obj.description;
-
-		const paragraphs = description.split('\n\n');
-
-		const listItems = paragraphs.map((paragraph) => {
-			if (paragraph.startsWith('- ')) {
-			  return `<li>${paragraph.slice(2)}</li>`;
-			} else {
-			  return `<p>${paragraph}</p>`;
-			}
-		  });
-
-		  console.log('🪲 file: app >>> row: 155 >>>', listItems.join(''))
-
-		// const paragraphs = obj.description.split('\n')
+		// const description = obj.description
+		// const paragraphs = description.split('\n')
+		// const modalList = document.querySelector('.modal-content ul')
 
 		// paragraphs.forEach((paragraph) => {
+		// 	if (paragraph.startsWith('—')) {
+		// 		const li = document.createElement('li')
+		// 		li.textContent = paragraph
+		// 		modalTextContanier.appendChild(li)
+		// 	} else {
+		// 		const p = document.createElement('p')
+		// 		p.textContent = paragraph
+		// 		modalTextContanier.appendChild(p)
+		// 	}
+
+		// if (paragraph.startsWith('-')) {
+		// 	const li = document.createElement('li')
+		// 	li.textContent = paragraph.slice(2)
+		// 	modalTextContanier.appendChild(li)
+		// 	console.log('list topildi')
+		// } else {
 		// 	const p = document.createElement('p')
 		// 	p.textContent = paragraph
 		// 	modalTextContanier.appendChild(p)
+		// }
 		// })
+
+		const paragraphs = obj.description.split('\n')
+
+		paragraphs.forEach((paragraph) => {
+			const p = document.createElement('p')
+			p.textContent = paragraph
+			modalTextContanier.appendChild(p)
+		})
 
 		document.querySelector('.progress-bar h3').innerHTML = obj.title
 		document
