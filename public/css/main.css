@@ -1604,7 +1604,7 @@ aside img {
   font-weight: 900;
   font-family: "Gilroy";
   text-transform: uppercase;
-  font-size: clamp(25px, 4vw, 80px);
+  font-size: clamp(22px, 4vw, 80px);
   margin-top: -15px;
   background: linear-gradient(91deg, rgba(0, 84, 149, 0.6) 4.02%, rgba(16, 120, 199, 0.6) 63.5%, rgba(0, 57, 168, 0.6) 127.35%);
   background-clip: text;
@@ -1777,7 +1777,7 @@ aside img {
   border: 1px solid rgb(0, 84, 149);
   background: linear-gradient(88deg, rgba(0, 84, 149, 0.6), rgba(16, 120, 199, 0.6), rgba(0, 57, 168, 0.6));
 }
-@media (min-width: 1400px) {
+@media (min-width: 1920px) {
   .tag {
     padding: 8px 15px;
     gap: 10px;
@@ -1789,7 +1789,7 @@ aside img {
   height: 37px;
   user-select: none;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1920px) {
   .tag-image {
     width: 64px;
     height: 64px;
@@ -1830,7 +1830,7 @@ aside img {
     -webkit-box-orient: vertical;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1920px) {
   .tag p {
     font-size: 20px;
   }
