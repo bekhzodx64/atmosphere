@@ -13,6 +13,8 @@ const getDataFromJson = async function () {
 getDataFromJson()
 
 document.addEventListener('DOMContentLoaded', async () => {
+	document.body.style.overflow = 'auto'
+
 	decorationImages.forEach((decoration) => {
 		decoration.style.opacity = 1
 	})
@@ -43,7 +45,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 			const stratosphereDescription = document.querySelector(
 				'.stratosphere-description'
 			)
-
 
 			if (sectionIndex != 6) {
 				troposphereDescription.classList.remove('dark')
@@ -83,7 +84,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 			if (sectionIndex == 6) {
 				troposphereDescription.classList.add('dark')
 				statistics[4].classList.add('dark')
-				// modalContentDescription.classList.add('dark')
 			}
 
 			if (sectionIndex == 5) {
@@ -91,9 +91,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 				statistics[3].classList.add('dark')
 			}
 
-			sectionIndex == 5 || sectionIndex == 6 ? modalContentDescription.classList.add('dark') : modalContentDescription.classList.remove('dark')
-			sectionIndex == 5 || sectionIndex == 6 ? modalContent.classList.add('light') : modalContent.classList.remove('light')
-			sectionIndex == 5 || sectionIndex == 6 ? modalOverlayBottom.classList.add('light') : modalOverlayBottom.classList.remove('light')
+			sectionIndex == 5 || sectionIndex == 6
+				? modalContentDescription.classList.add('dark')
+				: modalContentDescription.classList.remove('dark')
+			sectionIndex == 5 || sectionIndex == 6
+				? modalContent.classList.add('light')
+				: modalContent.classList.remove('light')
+			sectionIndex == 5 || sectionIndex == 6
+				? modalOverlayBottom.classList.add('light')
+				: modalOverlayBottom.classList.remove('light')
 
 			if (sectionIndex == 5 || sectionIndex == 6 || sectionIndex == 7) {
 				navLinks.forEach((link) => {
@@ -133,13 +139,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const modalContent = document.querySelector('.modal-content')
 
 	const setModalData = (obj) => {
-		const paragraphs = obj.description.split('\n')
 
-		paragraphs.forEach((paragraph) => {
-			const p = document.createElement('p')
-			p.textContent = paragraph
-			modalTextContanier.appendChild(p)
-		})
+		const description = obj.description;
+
+		const paragraphs = description.split('\n\n');
+
+		const listItems = paragraphs.map((paragraph) => {
+			if (paragraph.startsWith('- ')) {
+			  return `<li>${paragraph.slice(2)}</li>`;
+			} else {
+			  return `<p>${paragraph}</p>`;
+			}
+		  });
+
+		  console.log('🪲 file: app >>> row: 155 >>>', listItems.join(''))
+
+		// const paragraphs = obj.description.split('\n')
+
+		// paragraphs.forEach((paragraph) => {
+		// 	const p = document.createElement('p')
+		// 	p.textContent = paragraph
+		// 	modalTextContanier.appendChild(p)
+		// })
 
 		document.querySelector('.progress-bar h3').innerHTML = obj.title
 		document

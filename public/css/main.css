@@ -168,6 +168,9 @@ html {
   font-family: "SF-Pro";
 }
 
+body {
+  overflow: hidden;
+}
 body.overflow {
   overflow: hidden !important;
 }
@@ -1938,7 +1941,7 @@ aside img {
   z-index: 10;
 }
 .modal-content .overlay-bottom.light {
-  background-color: #d0ecff;
+  background-image: linear-gradient(transparent, #d0ecff);
 }
 @media (min-width: 992px) {
   .modal-content .overlay-bottom {
