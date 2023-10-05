@@ -2,7 +2,7 @@
 	display: flex
 	align-items: center
 	gap: 5px
-	padding: 5px 10px
+	padding: 5px 14px
 	border-radius: 100px
 	max-width: max-content
 
@@ -15,7 +15,7 @@
 		background: linear-gradient(88deg, rgba(0, 84, 149, 0.6),rgba(16, 120, 199, 0.6),rgba(0, 57, 168, 0.6))
 
 	@include xxxxl
-		padding: 8px 15px
+		padding: 8px 20px
 		gap: 10px
 
 	&-image
@@ -47,7 +47,9 @@
 		font-family: 'Gilroy'
 		font-size: 12px
 		font-weight: 700
-		max-width: 285px
+		width: 100%
+		min-width: 100px
+		max-width: 250px
 		+limit-line(1)
 
 		@include xxxxl
