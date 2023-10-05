@@ -4,10 +4,10 @@ const decorationImages = document.querySelectorAll('.decoration')
 let data = null
 
 const getDataFromJson = async function () {
-	const response = fetch('./data/data.json')
-	const responseParse = (await response).json()
+	const response = await fetch('./data/data.json')
+	const responseData = await response.json()
 
-	data = await responseParse
+	data = responseData
 }
 
 getDataFromJson()
@@ -139,33 +139,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const modalContent = document.querySelector('.modal-content')
 
 	const setModalData = (obj) => {
-		// const description = obj.description
-		// const paragraphs = description.split('\n')
-		// const modalList = document.querySelector('.modal-content ul')
-
-		// paragraphs.forEach((paragraph) => {
-		// 	if (paragraph.startsWith('—')) {
-		// 		const li = document.createElement('li')
-		// 		li.textContent = paragraph
-		// 		modalTextContanier.appendChild(li)
-		// 	} else {
-		// 		const p = document.createElement('p')
-		// 		p.textContent = paragraph
-		// 		modalTextContanier.appendChild(p)
-		// 	}
-
-		// if (paragraph.startsWith('-')) {
-		// 	const li = document.createElement('li')
-		// 	li.textContent = paragraph.slice(2)
-		// 	modalTextContanier.appendChild(li)
-		// 	console.log('list topildi')
-		// } else {
-		// 	const p = document.createElement('p')
-		// 	p.textContent = paragraph
-		// 	modalTextContanier.appendChild(p)
-		// }
-		// })
-
 		const paragraphs = obj.description.split('\n')
 
 		paragraphs.forEach((paragraph) => {
@@ -178,9 +151,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 		document
 			.querySelector('.modal-content__text .next-sphere')
 			.setAttribute('href', `${obj.href}`)
-		// document
-		// 	.querySelector('.modal-content__text img')
-		// 	.setAttribute('src', `${obj.image}`)
 	}
 
 	if (readMoreLink) {
@@ -278,29 +248,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 				mobileMenu.classList.remove('show')
 				hamburger.classList.remove('active')
 			})
-		})
-	}
-
-	// Share button
-	const shareButton = document.querySelector('.share')
-	const shareIcon = document.querySelector('.share button .share-icon')
-	const tickIcon = document.querySelector('.share button .tick-icon')
-
-	let timer
-
-	if (shareButton) {
-		shareButton.addEventListener('click', () => {
-			navigator.clipboard.writeText(window.location.href)
-
-			shareIcon.classList.add('hide')
-			tickIcon.classList.add('show')
-
-			clearTimeout(timer)
-
-			timer = setTimeout(() => {
-				shareIcon.classList.remove('hide')
-				tickIcon.classList.remove('show')
-			}, 2000)
 		})
 	}
 

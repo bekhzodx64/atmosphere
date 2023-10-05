@@ -845,13 +845,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 7) {
+  @supports (-webkit-line-clamp: 6) {
     .question-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 7;
+      -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
     }
   }
@@ -941,13 +941,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 7) {
+  @supports (-webkit-line-clamp: 6) {
     .exosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 7;
+      -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
     }
   }
@@ -958,13 +958,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 9) {
+  @supports (-webkit-line-clamp: 8) {
     .exosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 9;
+      -webkit-line-clamp: 8;
       -webkit-box-orient: vertical;
     }
   }
@@ -1037,13 +1037,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 7) {
+  @supports (-webkit-line-clamp: 6) {
     .thermosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 7;
+      -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
     }
   }
@@ -1133,13 +1133,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 7) {
+  @supports (-webkit-line-clamp: 6) {
     .mesosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 7;
+      -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
     }
   }
@@ -1232,13 +1232,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 7) {
+  @supports (-webkit-line-clamp: 6) {
     .stratosphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 7;
+      -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
     }
   }
@@ -1331,13 +1331,13 @@ aside img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  @supports (-webkit-line-clamp: 7) {
+  @supports (-webkit-line-clamp: 6) {
     .troposphere-description {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 7;
+      -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
     }
   }
