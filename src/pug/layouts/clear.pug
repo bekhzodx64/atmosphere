@@ -4,6 +4,13 @@ html(lang='en')
 		meta(charset='UTF-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(property='og:title', content='Atmosferaning 5 qatlami')
+		meta(
+			property='og:description',
+			content='er atmosferasi bu — sayyoramizni oʻrab olgan havo qobigʻi. U azot (78%), kislorod (21%), argon (0,93%), karbonat angidrid (0,03%) va boshqa gazlar aralashmasidan iborat. Tortishish kuchi atmosferani Yer atrofida tutib turadi va Yer yuzasidan yuzlab kilometrlargacha yuqoriga choʻzilgan boʻladi.'
+		)
+		meta(property='og:image', content='./img/preview.png')
+		meta(property='og:url', content='https://sinaps.uz/landings/atmosfera/')
 		link(
 			refl='apple-touch-icon',
 			sizes='180x180',
@@ -22,7 +29,7 @@ html(lang='en')
 			href='./img/favicon-16x16.png'
 		)
 		link(rel='manifest', href='./site.webmanifest')
-		title Atmosfera
+		title Atmosfera - Landing - Sinaps
 
 		link(rel='stylesheet', href='./plugins/fullpage.min.css')
 		link(rel='stylesheet', href='./css/main.css')
@@ -37,7 +44,6 @@ html(lang='en')
 		include ../components/header/header.pug
 
 		//- button.up up
-
 
 		main#app
 			block mainContent
